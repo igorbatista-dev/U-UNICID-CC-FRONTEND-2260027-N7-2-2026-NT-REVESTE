@@ -16,6 +16,24 @@ O Trocaverde propõe uma alternativa a esse ciclo: uma plataforma comunitária o
 
 O tema se conecta diretamente ao eixo de sustentabilidade e impacto social da atividade porque une **consumo consciente** (reduzir a compra de peças novas), **economia circular** (reaproveitar o que já existe) e **impacto social** (aproximar comunidades através da troca, incluindo brechós e ONGs locais).
 
+## 2.1 Dados e fundamentação do problema ambiental.
+O descarte inadequado de roupas e resíduos têxteis representa um desafio ambiental significativo no Brasil. De acordo com um levantamento da S2F Partners, divulgado pela Agência Brasil em abril de 2025, os domicílios brasileiros descartam aproximadamente 4 milhões de toneladas de resíduos têxteis por ano. Em 2024, cada residência descartou, em média, 44 kg de roupas e calçados.
+
+Além do volume de resíduos gerados, a indústria da moda provoca impactos ambientais durante a produção e o consumo. Segundo dados divulgados pela Agência Brasil, estima-se que o setor têxtil responda por 2% a 8% das emissões globais de gases de efeito estufa, evidenciando a necessidade de práticas mais sustentáveis.
+
+Outro fator importante é o modelo de fast fashion, caracterizado pela produção em larga escala, preços acessíveis e rápida renovação das coleções. Esse modelo pode estimular o consumo excessivo e reduzir o tempo de utilização das peças, aumentando a geração de resíduos.
+
+Diante desse cenário, o projeto Trocaverde, desenvolvido pela equipe ReVeste, propõe incentivar a economia circular por meio da troca, doação e reaproveitamento de roupas. A iniciativa busca conscientizar os usuários sobre o consumo responsável, prolongar a vida útil das peças e contribuir para a redução do descarte desnecessário.
+
+## 2.2 Fontes e referências
+
+S2F PARTNERS. Brasil descarta cerca de 4 milhões de toneladas de resíduos têxteis. 9 abr. 2025. Disponível em: https://s2fpartners.com.br/2025/04/brasil-descarta-cerca-de-4-milhoes-de-toneladas-de-residuos-texteis/.
+
+AGÊNCIA BRASIL. Brasil descarta 4 milhões de toneladas de resíduos têxteis por ano. 1 abr. 2025. Disponível em: https://agenciabrasil.ebc.com.br/economia/noticia/2025-04/brasil-descarta-4-milhoes-de-toneladas-de-residuos-texteis-por-ano.
+
+ONU NEWS. Indústria da moda é responsável por 2% a 8% das emissões globais de carbono. 2022. Disponível em: https://news.un.org/pt/story/2022/10/1804067.
+
+
 ## 3. Objetivos
 
 **Geral:** facilitar a troca e o reaproveitamento de roupas entre a comunidade, reduzindo o descarte têxtil e promovendo o consumo consciente.
