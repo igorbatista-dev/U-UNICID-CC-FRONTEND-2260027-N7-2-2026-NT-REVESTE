@@ -673,6 +673,7 @@ audio {
   width: 100%; 
   height: auto; /* Remove a altura forçada */
   display: block; 
+  margin-bottom: 1rem;
   background: var(--color-card);
   border-radius: var(--radius-sm);
 }
