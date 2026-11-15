@@ -129,7 +129,7 @@ ReVeste/
 |---|---|
 | Caio Eduardo Almeida | Responsável por desenvolver as páginas HTML |
 | Davi Henrique | Responsável pela fonte de mídias e dados relacionados ao projeto|
-| Gabrielly Witai | Responsável por desenvolver a apresentação do projeto |
+| Gabrielly Witai | Documentação, elaboração dos slides, roteiro e organização do projeto |
 | Igor Santos | Responsável pela hospedagem do HTML e validação de acesso ao site e seus recursos |
 | Isabela Calisto | Responsável pela análise e documentação do projeto |
-| Maria Eduarda Peres | Responsável por criar a apresentação do projeto |
+| Maria Eduarda Peres | Documentação do uso de inteligência artificial e verificação dos links do site |
