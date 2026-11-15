@@ -1,69 +1,57 @@
 # Melhorias realizadas e previstas a partir do MVP — Trocaverde
 
-
 ## 1. Objetivo
 
-Este documento organiza a evolução do MVP do Trocaverde em direção à entrega. Como os arquivos completos da primeira versão e um relatório comparativo de alterações não foram disponibilizados para esta revisão, a tabela distingue:
+Este documento organiza a evolução do MVP do Trocaverde em direção à entrega da atividade A2. Como não foram disponibilizados os arquivos completos da primeira versão e um relatório comparativo de todas as alterações, a análise distingue os recursos identificados nos materiais atuais, os requisitos novos ou reforçados pela atividade e as melhorias que ainda precisam de confirmação ou evidência.
 
-- aspectos que aparecem nos arquivos e registros atuais;
-- requisitos novos ou reforçados;
-- melhorias que ainda precisam de confirmação ou evidência.
-
-Assim, não se atribui à equipe uma correção específica sem uma comparação verificável entre as versões.
+Assim, não são atribuídas correções específicas à equipe sem uma comparação verificável entre as versões.
 
 ## 2. Evolução identificada
 
 | Aspecto | MVP / planejamento inicial | Situação identificada nos materiais atuais |
 |---|---|---|
-| Estrutura do site | Previsão de dez páginas em HTML e CSS | A documentação e os arquivos consultados identificam dez páginas interligadas |
-| Navegação | Menu comum às páginas | O registro de testes informa menu nas dez páginas e `aria-current="page"` |
-| Acessibilidade estrutural | Uso planejado de `lang`, `alt`, teclado e semântica | O teste automático registra idioma, landmarks, títulos, labels e textos alternativos |
-| Responsividade | Layout adaptável a diferentes telas | O teste registrado informa verificação da home em 1280 px e 390 px, sem rolagem horizontal na menor largura |
-| Galeria | Fotos de peças previstas | Os documentos registram ilustrações SVG no lugar de fotografias próprias | 
-| Conteúdo audiovisual | Vídeo e áudio de um mutirão/depoimento previstos | O README anterior descreve os arquivos de mídia como demonstrações (cartão de título de 6 s e tom de 4 s) |
-| Indicadores de impacto | Conteúdo educativo e indicadores previstos | A página de impacto apresenta números identificados como fictícios/ilustrativos |
-| Formulário | Formulário com validação HTML5 planejado | O código JS fornecido valida obrigatoriedade, e-mail e tamanho mínimo, exibe erros, salva rascunho e envia ao Formspree |
-| JavaScript | Opcional no escopo da primeira versão | O código fornecido implementa dropdown, reveal, contadores, filtros, lightbox, campo condicional, contador de caracteres, `localStorage` e envio do formulário |
-| Publicação | Site local na primeira entrega | Exige publicação HTTPS; não foi fornecido endereço público nesta revisão |
+| Estrutura do site | Previsão de dez páginas em HTML e CSS. | Dez páginas interligadas identificadas no repositório. |
+| Navegação | Menu comum às páginas. | Menu registrado nas dez páginas e identificação da página ativa com `aria-current="page"`. |
+| Acessibilidade estrutural | Uso planejado de idioma, textos alternativos, teclado e elementos semânticos. | Verificações estruturais registradas nas dez páginas, incluindo idioma, títulos, elementos semânticos, labels e textos alternativos. |
+| Responsividade | Layout adaptável a diferentes telas. | Página inicial verificada em 1280 px e 390 px, sem rolagem horizontal na menor largura. |
+| Galeria | Fotografias de peças previstas para demonstrar as possibilidades de troca. | Foram utilizadas ilustrações SVG no lugar de fotografias próprias. O código também apresenta filtros e lightbox. |
+| Conteúdo audiovisual | Vídeo de mutirão e áudio de depoimento previstos. | O README anterior descreve os arquivos de mídia como demonstrações: cartão de título de 6 segundos e tom de 4 segundos. |
+| Indicadores de impacto | Conteúdo educativo e indicadores previstos. | A página de impacto apresenta números identificados como fictícios ou ilustrativos. |
+| Formulário | Formulário com validação HTML5 planejado. | O código JavaScript implementa validação de campos, mensagens de erro, armazenamento de rascunho e envio ao Formspree. |
+| JavaScript | Opcional no escopo da primeira versão. | A versão atual apresenta dropdown, efeitos de revelação, contadores animados, filtros, lightbox, campo condicional, contador de caracteres, `localStorage` e envio do formulário. |
+| Publicação | Site local na primeira entrega. | O README informa um endereço de publicação no Railway (`https://trocaverde.up.railway.app/`), cuja disponibilidade e funcionamento precisam ser confirmados. |
 
-**EVOLUÇÃO MVP** 
+### Evolução visual
 
-Capturas de comprovações de melhoria do site criado:
-[Print de antes](img/antes-TrocaVerde.jpeg) e [Print de depois](img/Site_Depois_TrocaVerde.jpeg) 
+As capturas de tela abaixo podem ser utilizadas para demonstrar a evolução visual entre o MVP e a versão posterior:
 
-## 3. Melhorias exigidas
+- [Print de antes](img/antes-TrocaVerde.jpeg)
+- [Print de depois](img/Site_Depois_TrocaVerde.jpeg)
 
-A atividade amplia os requisitos da primeira versão. Antes da entrega, comprovar:
+## 3. Melhorias exigidas pela atividade A2
 
-1. **Validação do formulário com JavaScript:** o script já impede o envio inválido, exibe mensagens e direciona o foco ao primeiro campo inválido. É necessário conferir o destaque visual no CSS e complementar a validação de telefone/CEP, se esses padrões forem exigidos para os campos.
-2. **Armazenamento local:** o script salva e restaura o rascunho com `localStorage`. Como isso inclui dados digitados pelo visitante, a equipe deve avaliar a necessidade e informar essa funcionalidade.
-3. **Interação com o DOM:** o script apresenta várias interações, incluindo menu dropdown, filtros da galeria, lightbox e campo condicional.
-4. **Envio do formulário:** o script envia os dados ao Formspree usando `fetch()`. É necessário testar o endpoint e os retornos de sucesso e erro.
-5. **Publicação:** disponibilizar o site em endereço HTTPS.
-6. **Versionamento colaborativo:** manter histórico de commits e comprovar o fluxo de branch e pull request solicitado.
-7. **Documentação:** registrar os testes, melhorias, uso de IA e evidências.
+A atividade amplia os requisitos da primeira versão. Os seguintes pontos devem ser comprovados na entrega:
 
-## 4. Evidências que devem acompanhar a versão final
+1. **Validação do formulário com JavaScript:** o script implementa verificações de campos obrigatórios, formato básico de e-mail e tamanho mínimo, apresenta mensagens de erro e direciona o foco ao primeiro campo inválido.
 
-- Capturas de tela do MVP e da versão final, quando disponíveis, para comparação visual.
-- Código ou commit que demonstre cada melhoria.
-- Capturas dos testes de formulário, `localStorage` e interação com DOM.
-- Relatórios dos validadores HTML e CSS.
-- URL do site publicado e do repositório.
+2. **Armazenamento local:** o script utiliza `localStorage` para salvar e restaurar o rascunho do formulário. Como esse recurso armazena informações digitadas pelo visitante no navegador, é importante avaliar sua necessidade e informar sua utilização.
 
-## 5. Conclusão
+3. **Interação com o DOM:** foram identificadas diferentes interações em JavaScript, como menu dropdown, efeitos de revelação durante a rolagem, contadores animados, filtros da galeria, lightbox, campo condicional e contador de caracteres.
 
-Os registros atuais demonstram evolução na organização e verificação estrutural do site, especialmente na navegação, semântica e responsividade da página inicial. Entretanto, a conclusão das melhorias específicas da A2 — principalmente JavaScript, publicação e fluxo de colaboração no GitHub — depende de conferência da versão completa e de evidências que ainda não constam nos materiais consultados.
+4. **Envio do formulário:** o código utiliza `fetch()` para enviar os dados ao Formspree. É necessário testar o endpoint e verificar os retornos de sucesso e erro no ambiente publicado.
 
+5. **Publicação:** disponibilizar o site em um endereço HTTPS e confirmar o carregamento correto das páginas e dos recursos utilizados.
 
-## 6. Ajustes documentais identificados na conferência do GitHub
+6. **Versionamento colaborativo:** manter o histórico de commits e comprovar o fluxo de branches e pull requests solicitado pela atividade.
 
-- **README da raiz:** atualizar a descrição da primeira entrega que informa JavaScript opcional e pasta `js/` reservada.
-- **Descrição do repositório:** alinhar o texto curto do GitHub à proposta real de troca e reaproveitamento de roupas, evitando a interpretação de que o projeto é uma loja de venda convencional.
-- **Links da entrega:** incluir a URL do site publicado somente depois de confirmar que abre com HTTPS.
-- **Versionamento:** conferir se todos os integrantes possuem commits e se há pelo menos uma branch com pull request, conforme a atividade.
-- **Pasta `/docs`:** confirmar que os sete documentos estão efetivamente presentes no repositório e correspondem à versão final.
+7. **Documentação:** registrar os testes realizados, as melhorias implementadas, o uso de inteligência artificial e as respectivas evidências.
 
+## 4. Validações e melhorias futuras
 
+Os recursos identificados no código não significam, necessariamente, que todos os seus comportamentos foram validados em execução. Por isso, permanecem os seguintes pontos:
 
+1. **Ampliar os testes responsivos:** verificar todas as páginas em diferentes tamanhos de tela, incluindo celular, tablet e desktop.
 
+2. **Evoluir o conteúdo:** manter notícias, fontes e informações educativas revisadas e atualizadas.
+
+3. **Avaliar uma plataforma de dados:** caso o projeto evolua para uma operação real, estudar autenticação, cadastro de usuários, armazenamento de peças e gestão de trocas. Isso
