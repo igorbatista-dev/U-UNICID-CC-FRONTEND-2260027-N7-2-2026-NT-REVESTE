@@ -81,28 +81,31 @@ O valor do domínio próprio não deve ser incluído como despesa atual enquanto
 
 ## 6. Custos e serviços a confirmar
 
+A publicação do Trocaverde utiliza a Railway e o endereço disponibilizado pela própria plataforma. Entretanto, a URL pública não permite identificar o plano contratado, o consumo de recursos ou a existência de cobranças na conta responsável pela hospedagem.
+
+Da mesma forma, os custos efetivamente pagos pela equipe precisam ser confirmados por meio do histórico financeiro da plataforma.
+
 | Item | Situação |
 |---|---|
-| Hospedagem atual | Railway. O site foi publicado sem custos para a equipe, totalizando R$ 0,00 de desembolso. |
-| Subdomínio da plataforma | `trocaverde.up.railway.app`, disponibilizado gratuitamente pela plataforma no contexto da publicação realizada. |
+| Hospedagem atual | Railway. |
+| Subdomínio da plataforma | `trocaverde.up.railway.app`, disponibilizado pela Railway, sem contratação separada de domínio próprio. |
 | Domínio próprio | Não contratado. O projeto utiliza o subdomínio fornecido pela Railway. |
-| Renovação de domínio | Não há custos de renovação, pois não foi contratado domínio próprio. |
-| Serviços externos do formulário | O código apresenta integração com Formspree, mas o formulário publicado informa que o envio é demonstrativo. Não há despesa confirmada com esse serviço. |
+| Renovação de domínio | Não há despesa identificada, pois não foi constatada a contratação de um domínio próprio. |
+| Serviço externo do formulário | O código apresenta integração com o Formspree e tenta enviar os dados por meio de uma requisição `fetch()`. |
+| Newsletter | Recurso demonstrativo.|
 
 ### 6.1 Resumo financeiro
 
 | Descrição | Custo efetivo |
 |---|---:|
-| Publicação na Railway | R$ 0,00 |
-| Domínio próprio | R$ 0,00 |
-| Serviço Formspree | R$ 0,00 |
-| **Total desembolsado pela equipe** | **R$ 0,00** |
-
-**Observação:** o valor de R$ 0,00 representa o desembolso efetivo da equipe para publicar o projeto, não necessariamente o preço comercial dos serviços utilizados. A Railway possui planos pagos, mas não houve pagamento para a publicação desta versão.
+| Publicação na Railway | Não contratado |
+| Domínio próprio | Não contratado |
+| Serviço Formspree | Não contratado |
+| **Total desembolsado pela equipe** | **R$0,00** |
 
 ### 6.2 Referência de custo do Formspree
 
-A página oficial do Formspree apresenta:
+A página oficial do Formspree apresenta diferentes planos e limites de utilização. Os valores abaixo são referências comerciais e podem sofrer alterações:
 
 | Plano | Valor de referência | Limite de envios |
 |---|---:|---:|
@@ -110,7 +113,7 @@ A página oficial do Formspree apresenta:
 | Personal | US$ 15/mês ou US$ 120/ano | 200 envios mensais |
 | Professional | US$ 30/mês ou US$ 240/ano | 2.000 envios mensais |
 
-Esses valores são referências comerciais. Como o formulário publicado informa que o envio é demonstrativo, não há comprovação de que a equipe tenha contratado ou esteja utilizando um desses planos.
+O código do Trocaverde contém um endpoint do Formspree e uma implementação de envio por requisição `fetch()`. Isso indica que existe uma tentativa de integração com o serviço.
 
 ## 7. Justificativa da escolha
 
