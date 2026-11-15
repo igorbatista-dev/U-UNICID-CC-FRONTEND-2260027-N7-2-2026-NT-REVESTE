@@ -63,6 +63,7 @@ A Inteligência Artificial foi utilizada como ferramenta de apoio ao desenvolvim
 Este documento apresenta os prompts utilizados no ChatGPT e as respectivas respostas, com o objetivo de auxiliar a equipe no desenvolvimento, organização e revisão do projeto Trocaverde.
 
 1. Análise da estrutura e funcionalidades do site
+
 -**Pergunta**
 Analise a estrutura e as funcionalidades do site Trocaverde e sugira melhorias na organização das páginas, navegação e funcionamento dos elementos.
 
@@ -70,6 +71,7 @@ Analise a estrutura e as funcionalidades do site Trocaverde e sugira melhorias n
 O site Trocaverde apresenta uma estrutura organizada, com páginas destinadas à apresentação do projeto, divulgação de iniciativas, demonstração de impactos e contato com os visitantes. Recomenda-se melhorar a navegação, destacar as principais funcionalidades e aprimorar a visualização em dispositivos móveis.
 
 2. Usabilidade e acessibilidade
+
 -**Pergunta:**
 Avalie a usabilidade e a acessibilidade do site Trocaverde e apresente sugestões para melhorar a experiência dos usuários.
 
@@ -77,6 +79,7 @@ Avalie a usabilidade e a acessibilidade do site Trocaverde e apresente sugestõe
 Recomenda-se melhorar o contraste entre textos e fundos, adicionar descrições às imagens e facilitar a navegação pelo teclado. Também é importante manter os menus intuitivos e garantir que o site funcione adequadamente em diferentes dispositivos.
 
 3. Análise das funcionalidades JavaScript
+   
 -**Pergunta:**
 Analise as funcionalidades JavaScript do projeto e sugira melhorias para os botões, menus, formulários e elementos interativos.
 
@@ -84,6 +87,7 @@ Analise as funcionalidades JavaScript do projeto e sugira melhorias para os bot�
 É importante verificar se os elementos interativos apresentam o comportamento esperado. Recomenda-se adicionar validações aos formulários, mensagens de confirmação e avisos de erro, melhorando a interação entre o usuário e o site.
 
 4. Revisão da documentação
+
 -**Pergunta:**
 Analise os conteúdos do site e identifique informações divergentes, erros de escrita e trechos que precisam de esclarecimento.
 
@@ -91,6 +95,7 @@ Resposta:
 Foram identificadas divergências nos indicadores apresentados no site. Alguns dados mostram 1.240 peças trocadas e oito pontos ativos, enquanto outros indicadores aparecem zerados. Também é necessário revisar alguns textos, corrigir possíveis erros gramaticais e padronizar as informações.
 
 5. Organização da apresentação
+
 -**Pergunta:**
 Sugira uma organização para a apresentação do projeto Trocaverde, destacando os principais tópicos que devem ser apresentados.
 
@@ -98,6 +103,7 @@ Sugira uma organização para a apresentação do projeto Trocaverde, destacando
 Recomenda-se organizar a apresentação seguindo uma sequência lógica: introdução do projeto, objetivos, problema identificado, soluções propostas, funcionalidades desenvolvidas, tecnologias utilizadas, resultados obtidos e conclusão.
 
 6. Testes e validações
+   
 -**Pergunta:**
 Identifique quais testes e validações devem ser realizados no site para verificar seu funcionamento, acessibilidade e responsividade.
 
@@ -105,9 +111,13 @@ Identifique quais testes e validações devem ser realizados no site para verifi
 Recomenda-se realizar testes de navegação entre as páginas, funcionamento dos botões e formulários, responsividade em dispositivos móveis, acessibilidade e validação dos dados apresentados. Esses testes ajudam a identificar possíveis falhas antes da entrega final.
 
 7. Resultados do apoio da IA
+   
 O ChatGPT auxiliou na análise do projeto Trocaverde, apresentando sugestões de melhorias na estrutura, navegação, acessibilidade e organização dos conteúdos. Também contribuiu para identificar possíveis divergências nas informações e apontar testes e validações necessários.
 
 8. Revisão humana
+   
 As sugestões fornecidas pela IA devem ser avaliadas pelos integrantes da equipe. A implementação das alterações, as decisões sobre o projeto, a execução dos testes e a aprovação final dos materiais permanecem sob responsabilidade da equipe.
 
-Observação: As respostas apresentam sugestões de melhorias e análises, não significando que todas as alterações foram implementadas ou que os testes mencionados foram executados.
+**Observação:** 
+
+A ferramenta IA não efetuou nenhum tipo de modificação no trabalho, mantendo integralmente o conteúdo original.
