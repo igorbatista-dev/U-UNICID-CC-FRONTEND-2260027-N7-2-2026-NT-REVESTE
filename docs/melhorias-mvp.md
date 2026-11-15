@@ -54,4 +54,4 @@ Os recursos identificados no código não significam, necessariamente, que todos
 
 2. **Evoluir o conteúdo:** manter notícias, fontes e informações educativas revisadas e atualizadas.
 
-3. **Avaliar uma plataforma de dados:** caso o projeto evolua para uma operação real, estudar autenticação, cadastro de usuários, armazenamento de peças e gestão de trocas. Isso
+3. **Avaliar uma plataforma de dados:** caso o projeto evolua para uma operação real, estudar autenticação, cadastro de usuários, armazenamento de peças e gestão de trocas.
