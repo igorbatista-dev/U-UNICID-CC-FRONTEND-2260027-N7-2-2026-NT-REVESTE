@@ -19,7 +19,7 @@ Assim, não se atribui à equipe uma correção específica sem uma comparação
 | Navegação | Menu comum às páginas | O registro de testes informa menu nas dez páginas e `aria-current="page"` |
 | Acessibilidade estrutural | Uso planejado de `lang`, `alt`, teclado e semântica | O teste automático registra idioma, landmarks, títulos, labels e textos alternativos |
 | Responsividade | Layout adaptável a diferentes telas | O teste registrado informa verificação da home em 1280 px e 390 px, sem rolagem horizontal na menor largura |
-| Galeria | Fotos de peças previstas | Os documentos registram ilustrações SVG no lugar de fotografias próprias |
+| Galeria | Fotos de peças previstas | Os documentos registram ilustrações SVG no lugar de fotografias próprias | [Print de antes](img/antes-TrocaVerde.jpeg)
 | Conteúdo audiovisual | Vídeo e áudio de um mutirão/depoimento previstos | O README anterior descreve os arquivos de mídia como demonstrações (cartão de título de 6 s e tom de 4 s) |
 | Indicadores de impacto | Conteúdo educativo e indicadores previstos | A página de impacto apresenta números identificados como fictícios/ilustrativos |
 | Formulário | Formulário com validação HTML5 planejado | O código JS fornecido valida obrigatoriedade, e-mail e tamanho mínimo, exibe erros, salva rascunho e envia ao Formspree |
@@ -58,3 +58,7 @@ Os registros atuais demonstram evolução na organização e verificação estru
 - **Links da entrega:** incluir a URL do site publicado somente depois de confirmar que abre com HTTPS.
 - **Versionamento:** conferir se todos os integrantes possuem commits e se há pelo menos uma branch com pull request, conforme a atividade.
 - **Pasta `/docs`:** confirmar que os sete documentos estão efetivamente presentes no repositório e correspondem à versão final.
+
+
+
+
