@@ -314,8 +314,6 @@
     });
   });
 
-      // ... (código anterior do formulário: validação, etc) ...
-
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       
