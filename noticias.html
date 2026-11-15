@@ -23,20 +23,19 @@
         </svg>
         Trocaverde
       </a>
-      <input type="checkbox" id="nav-toggle" class="visually-hidden" aria-label="Abrir ou fechar o menu de navegação">
-      <label for="nav-toggle" class="nav-toggle-label">
-        <svg viewBox="0 0 24 24" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </label>
-      <nav class="main-nav" aria-label="Navegação principal">
+      <button type="button" class="nav-toggle-button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="impacto.html">Impacto</a></li>
           <li class="has-dropdown">
-            <button type="button" class="dropdown-toggle" aria-expanded="false">Conteúdo
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-controls="conteudo-menu">Conteúdo
               <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
             </button>
-            <ul class="dropdown">
+            <ul class="dropdown" id="conteudo-menu">
               <li><a href="galeria.html">Galeria</a></li>
               <li><a href="midia.html">Mídia</a></li>
               <li><a href="noticias.html" aria-current="page">Notícias</a></li>
@@ -81,7 +80,7 @@
             <h3>Animale amplia projeto de moda circular para todas as lojas após arrecadar 750 mil peças</h3>
             <p>O projeto Animale Vintage chega à sua oitava edição e passa a receber peças usadas em qualquer unidade da marca. Desde 2018, a iniciativa já arrecadou mais de 750 mil itens e destinou cerca de R$ 1 milhão a instituições sociais, prolongando a vida útil das roupas e criando novas histórias para peças que ainda podem circular.</p>
             <p style="margin-top: 1rem;">
-              <a href="https://exame.com/esg/animale-amplia-moda-circular-para-todas-as-lojas-apos-arrecadar-750-mil-pecas/" target="_blank" rel="noopener" style="font-weight: 700; color: var(--color-primary-dark); text-decoration: underline;">
+              <a href="https://exame.com/esg/animale-amplia-moda-circular-para-todas-as-lojas-apos-arrecadar-750-mil-pecas/" target="_blank" rel="noopener" style="font-weight: 700; text-decoration: underline;">
                 Ler notícia completa na Exame ↗
               </a>
             </p>
@@ -100,7 +99,7 @@
             <h3>Projeto de upcycling da Riachuelo transforma materiais sem uso em novas peças de moda</h3>
             <p>O segundo drop da linha Pool Loop, com direção criativa de Marcelo Sommer, ressignifica estoques parados da fábrica. A coleção conta com 25 modelos e mais de 650 unidades, recuperando mais de 620 peças com pequenos defeitos, 175 metros de tecidos e 557 aviamentos.</p>
             <p style="margin-top: 0.75rem;">
-              <a href="https://blog.riachuelo.com.br/sustentabilidade/pool-loop-marcelo-sommer/" target="_blank" rel="noopener" style="font-weight: 700; color: var(--color-accent-dark);">
+              <a href="https://blog.riachuelo.com.br/sustentabilidade/pool-loop-marcelo-sommer/" target="_blank" rel="noopener" style="font-weight: 700;">
                 Ler mais no Blog Riachuelo ↗
               </a>
             </p>
@@ -116,7 +115,7 @@
             <h3>Tecnologia de reciclagem enzimática consegue produzir camisetas de poliéster a partir de resíduos complexos</h3>
             <p>A Carbios e o consórcio Fiber-to-Fiber validaram a produção industrial de camisetas de poliéster reciclado a partir de resíduos têxteis e plásticos complexos. O processo enzimático gera um r-PET com desempenho idêntico ao poliéster virgem, demonstrando a viabilidade da circularidade em escala industrial.</p>
             <p style="margin-top: 0.75rem;">
-              <a href="https://www.globenewswire.com/fr/news-release/2026/09/29/3370389/0/en/carbios-and-the-fiber-to-fiber-consortium-successfully-validate-the-industrial-scale-production-of-recycled-polyester-t-shirts-made-from-complex-plastic-and-textile-waste.html" target="_blank" rel="noopener" style="font-weight: 700; color: var(--color-accent-dark);">
+              <a href="https://www.globenewswire.com/fr/news-release/2026/09/29/3370389/0/en/carbios-and-the-fiber-to-fiber-consortium-successfully-validate-the-industrial-scale-production-of-recycled-polyester-t-shirts-made-from-complex-plastic-and-textile-waste.html" target="_blank" rel="noopener" style="font-weight: 700;">
                 Ler mais no GlobeNewswire ↗
               </a>
             </p>
@@ -132,7 +131,7 @@
             <h3>Dez inovações são reconhecidas por desenvolver soluções para transformar o futuro da indústria têxtil</h3>
             <p>A H&M Foundation anunciou os vencedores do Global Change Award 2026, com soluções que vão de fibras regeneradas a partir de resíduos agrícolas a plataformas digitais que prolongam o ciclo de vida dos produtos. As inovações abordam desde a reciclagem enzimática até alternativas biodegradáveis ao couro animal.</p>
             <p style="margin-top: 0.75rem;">
-              <a href="https://hmfoundation.com/gca/winners/" target="_blank" rel="noopener" style="font-weight: 700; color: var(--color-accent-dark);">
+              <a href="https://hmfoundation.com/gca/winners/" target="_blank" rel="noopener" style="font-weight: 700;">
                 Ler mais na H&M Foundation ↗
               </a>
             </p>
@@ -148,7 +147,7 @@
             <h3>Circular Fashion Day incentiva reaproveitamento de resíduos têxteis e geração de renda em Belo Horizonte</h3>
             <p>O evento integra a programação da Semana do Meio Ambiente com oficinas e rodas de conversa sobre resíduos têxteis e empreendedorismo sustentável. A iniciativa busca transformar um dos principais desafios ambientais do setor em oportunidades de geração de renda, inclusão social e desenvolvimento sustentável.</p>
             <p style="margin-top: 0.75rem;">
-              <a href="https://semad.mg.gov.br/w/circular-fashion-day-propõe-transformar-resíduos-têxteis-em-oportunidade-e-renda-em-belo-horizonte" target="_blank" rel="noopener" style="font-weight: 700; color: var(--color-accent-dark);">
+              <a href="https://semad.mg.gov.br/w/circular-fashion-day-propõe-transformar-resíduos-têxteis-em-oportunidade-e-renda-em-belo-horizonte" target="_blank" rel="noopener" style="font-weight: 700;">
                 Ler mais na SEMAD ↗
               </a>
             </p>
@@ -164,7 +163,7 @@
             <h3>Marca catarinense apresenta coleção produzida com resíduos têxteis na Semana de Moda de Milão</h3>
             <p>A Proposta Verde, de Rio do Sul, transformou cerca de 200 quilos de excedentes têxteis em 600 peças da coleção Enlaço, apresentada no Brazilian Sustainable Fashion in Milan. O projeto, em parceria com a Fundação Hermann Hering, ressignifica algodão, linho e viscose com modelagens fluidas e trabalho artesanal.</p>
             <p style="margin-top: 0.75rem;">
-              <a href="https://economiasc.com/2026/10/06/marca-de-sc-transforma-200-quilos-de-excedentes-texteis-em-colecao-apresentada-em-milao/" target="_blank" rel="noopener" style="font-weight: 700; color: var(--color-accent-dark);">
+              <a href="https://economiasc.com/2026/10/06/marca-de-sc-transforma-200-quilos-de-excedentes-texteis-em-colecao-apresentada-em-milao/" target="_blank" rel="noopener" style="font-weight: 700;">
                 Ler mais no Economia SC ↗
               </a>
             </p>
@@ -201,11 +200,12 @@
         </div>
         <div>
           <h2>Receba avisos das feiras</h2>
-          <form class="newsletter-form" action="#" method="post">
+          <form class="newsletter-form" data-newsletter-form>
             <label for="newsletter-email" class="visually-hidden">Seu e-mail</label>
             <input type="email" id="newsletter-email" name="newsletter-email" placeholder="seu@email.com" required autocomplete="email">
             <button type="submit">Assinar</button>
           </form>
+          <p class="newsletter-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
         </div>
       </div>
       <p class="footer-bottom">Projeto acadêmico da equipe ReVeste — Atividade A2, Front-End, UNICID. Conteúdo fictício, produzido para fins educacionais.</p>
