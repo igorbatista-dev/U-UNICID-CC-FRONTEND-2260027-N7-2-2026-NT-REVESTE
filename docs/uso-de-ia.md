@@ -13,7 +13,7 @@ A IA não substituiu a análise, as decisões, o desenvolvimento ou a validaçã
 - **Ferramenta:** ChatGPT.
 - **Aplicações:** sugestões para o site, organização da apresentação e revisão dos documentos em Markdown.
 
-## 3. Exemplos de solicitações à IA
+## 3. Prompts e Retornos
 
 ### Apoio ao desenvolvimento do site
 
@@ -42,10 +42,6 @@ O ChatGPT foi utilizado para auxiliar a equipe nas seguintes atividades:
 - Sugerir melhorias na clareza e na formatação dos arquivos Markdown.
 - Auxiliar na identificação de testes e validações pendentes.
 
-### Revisão humana
-
-As sugestões fornecidas pela IA foram submetidas à análise da equipe. A implementação do código, as decisões sobre o projeto, a execução dos testes e a aprovação dos materiais permaneceram sob responsabilidade dos integrantes.
-
 ## 5. Registro de validação
 
 | Item | Responsável pela conferência |
@@ -62,16 +58,56 @@ As sugestões fornecidas pela IA foram submetidas à análise da equipe. A imple
 
 A Inteligência Artificial foi utilizada como ferramenta de apoio ao desenvolvimento e à organização do projeto Trocaverde.
 
-## 7. Conferência do repositório público
+**Apoio ao desenvolvimento e revisão do site Trocaverde**
 
-Durante a revisão do projeto, foi realizada uma consulta ao repositório público do Trocaverde no GitHub.
+Este documento apresenta os prompts utilizados no ChatGPT e as respectivas respostas, com o objetivo de auxiliar a equipe no desenvolvimento, organização e revisão do projeto Trocaverde.
 
-A análise registrou:
+1. Análise da estrutura e funcionalidades do site
+-**Pergunta**
+Analise a estrutura e as funcionalidades do site Trocaverde e sugira melhorias na organização das páginas, navegação e funcionamento dos elementos.
 
-- Presença de dez arquivos HTML e das principais pastas do projeto.
-- Histórico inicial de cinco commits exibidos na consulta.
-- Identificação de informações que precisavam de atualização no README da raiz.
-- Necessidade de confirmar a publicação HTTPS e as evidências de testes funcionais.
-- Ausência de confirmação de pull request na análise realizada.
+-**Resposta:**
+O site Trocaverde apresenta uma estrutura organizada, com páginas destinadas à apresentação do projeto, divulgação de iniciativas, demonstração de impactos e contato com os visitantes. Recomenda-se melhorar a navegação, destacar as principais funcionalidades e aprimorar a visualização em dispositivos móveis.
 
-A ferramenta de IA não realizou alterações diretamente no repositório. As atualizações e os commits foram realizados pela equipe.
+2. Usabilidade e acessibilidade
+-**Pergunta:**
+Avalie a usabilidade e a acessibilidade do site Trocaverde e apresente sugestões para melhorar a experiência dos usuários.
+
+-**Resposta:**
+Recomenda-se melhorar o contraste entre textos e fundos, adicionar descrições às imagens e facilitar a navegação pelo teclado. Também é importante manter os menus intuitivos e garantir que o site funcione adequadamente em diferentes dispositivos.
+
+3. Análise das funcionalidades JavaScript
+-**Pergunta:**
+Analise as funcionalidades JavaScript do projeto e sugira melhorias para os botões, menus, formulários e elementos interativos.
+
+-**Resposta:**
+É importante verificar se os elementos interativos apresentam o comportamento esperado. Recomenda-se adicionar validações aos formulários, mensagens de confirmação e avisos de erro, melhorando a interação entre o usuário e o site.
+
+4. Revisão da documentação
+-**Pergunta:**
+Analise os conteúdos do site e identifique informações divergentes, erros de escrita e trechos que precisam de esclarecimento.
+
+Resposta:
+Foram identificadas divergências nos indicadores apresentados no site. Alguns dados mostram 1.240 peças trocadas e oito pontos ativos, enquanto outros indicadores aparecem zerados. Também é necessário revisar alguns textos, corrigir possíveis erros gramaticais e padronizar as informações.
+
+5. Organização da apresentação
+-**Pergunta:**
+Sugira uma organização para a apresentação do projeto Trocaverde, destacando os principais tópicos que devem ser apresentados.
+
+-**Resposta:**
+Recomenda-se organizar a apresentação seguindo uma sequência lógica: introdução do projeto, objetivos, problema identificado, soluções propostas, funcionalidades desenvolvidas, tecnologias utilizadas, resultados obtidos e conclusão.
+
+6. Testes e validações
+-**Pergunta:**
+Identifique quais testes e validações devem ser realizados no site para verificar seu funcionamento, acessibilidade e responsividade.
+
+-**Resposta:**
+Recomenda-se realizar testes de navegação entre as páginas, funcionamento dos botões e formulários, responsividade em dispositivos móveis, acessibilidade e validação dos dados apresentados. Esses testes ajudam a identificar possíveis falhas antes da entrega final.
+
+7. Resultados do apoio da IA
+O ChatGPT auxiliou na análise do projeto Trocaverde, apresentando sugestões de melhorias na estrutura, navegação, acessibilidade e organização dos conteúdos. Também contribuiu para identificar possíveis divergências nas informações e apontar testes e validações necessários.
+
+8. Revisão humana
+As sugestões fornecidas pela IA devem ser avaliadas pelos integrantes da equipe. A implementação das alterações, as decisões sobre o projeto, a execução dos testes e a aprovação final dos materiais permanecem sob responsabilidade da equipe.
+
+Observação: As respostas apresentam sugestões de melhorias e análises, não significando que todas as alterações foram implementadas ou que os testes mencionados foram executados.
