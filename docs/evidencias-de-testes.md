@@ -1,12 +1,12 @@
 # Evidências de testes — Trocaverde
 
-Este documento reúne os testes e as verificações realizados durante o desenvolvimento do site Trocaverde. São apresentados os resultados da análise de navegação, estrutura HTML, acessibilidade, responsividade, validação pelo W3C, funcionamento do JavaScript e conferência do repositório GitHub.
+Este documento reúne os testes e as verificações realizados durante o desenvolvimento do Trocaverde, considerando a estrutura atual do repositório, as capturas de tela disponíveis e os requisitos da entrega A2.
 
-As informações registradas consideram os testes realizados pela equipe, os resultados documentados e as evidências disponíveis por meio de capturas de tela.
+Os resultados estão divididos entre verificações registradas pela equipe, análises do código-fonte e testes que ainda precisam de execução ou comprovação. A presença de uma funcionalidade no código não significa, necessariamente, que seu funcionamento tenha sido validado na versão publicada.
 
 ## 1. Navegação e links internos
 
-Um script percorreu as dez páginas do site e verificou os links internos, as folhas de estilo e as âncoras, com o objetivo de identificar possíveis referências quebradas.
+Durante o desenvolvimento, foi executada uma verificação automática dos links internos das dez páginas do site, das folhas de estilo e das âncoras, com o objetivo de identificar referências quebradas.
 
 | Página | Resultado registrado |
 |---|---|
@@ -21,276 +21,263 @@ Um script percorreu as dez páginas do site e verificou os links internos, as fo
 | `contato.html` | Sem links quebrados |
 | `orcamento_hospedagem.html` | Sem links quebrados |
 
-**Resultado:** não foram identificados problemas nos links verificados. Também foi registrada a presença do menu de navegação nas dez páginas e o uso de `aria-current="page"` para identificar a página ativa.
+**Resultado registrado:** a equipe não identificou links internos quebrados nas páginas verificadas. Também foi registrada a presença do menu de navegação nas dez páginas e do atributo `aria-current="page"` para identificar a página ativa.
 
-## 2. Estrutura HTML e verificações de acessibilidade
+**Observação:** recomenda-se repetir a verificação na versão final publicada, especialmente após alterações nos caminhos dos arquivos e na documentação.
 
-Nas dez páginas do site, foram verificadas características relacionadas à estrutura do HTML e à acessibilidade dos elementos.
+## 2. Estrutura HTML e acessibilidade estrutural
 
-Os itens analisados foram:
+Foram realizadas verificações estruturais nas dez páginas HTML, considerando os seguintes elementos:
 
-- Presença do atributo `lang="pt-BR"` para identificar o idioma da página;
+- Presença do atributo `lang="pt-BR"` para identificação do idioma;
 - Existência do elemento `<title>` e da meta description;
-- Presença de exatamente um `<h1>` por página;
-- Utilização das regiões semânticas `<header>`, `<nav>`, `<main>` e `<footer>`;
+- Presença de um elemento `<h1>` por página;
+- Utilização de regiões semânticas, como `<header>`, `<nav>`, `<main>` e `<footer>`;
 - Correspondência entre os atributos `for` dos elementos `<label>` e os `id` dos campos;
-- Ausência de imagens sem o atributo `alt`;
+- Presença do atributo `alt` nas imagens;
 - Identificação acessível das ilustrações SVG da galeria por meio de `role="img"` e `aria-label`.
 
-**Resultado:** as verificações estruturais descritas foram realizadas nas dez páginas. Esses procedimentos ajudam a identificar problemas na organização do HTML e na identificação dos elementos, mas não substituem testes manuais com teclado e leitores de tela.
+**Resultado registrado:** as verificações estruturais descritas foram realizadas nas dez páginas. Não foram registrados elementos `<img>` sem atributo `alt`, e as ilustrações SVG verificadas apresentavam identificação acessível.
 
-## 3. Testes de validação W3C — HTML e CSS
+Essas verificações ajudam a melhorar a organização do HTML e a identificação dos elementos pelas tecnologias assistivas, mas não comprovam, isoladamente, a conformidade completa com critérios de acessibilidade.
 
-O grupo realizou testes utilizando os validadores oficiais do W3C para verificar a estrutura dos arquivos HTML e a folha de estilo CSS do projeto.
+### 2.1. Testes complementares de acessibilidade
 
-Os registros foram documentados por meio de capturas de tela, permitindo consultar os resultados apresentados pelas ferramentas.
+A atividade A2 também exige atenção ao contraste AA, à navegação por teclado e ao uso de recursos de acessibilidade.
 
-### 3.1. Resumo dos testes
+| Verificação | Situação |
+|---|---|
+| Idioma `pt-BR` | Verificado na análise estrutural |
+| Textos alternativos das imagens | Verificados na análise estrutural |
+| Identificação de elementos e campos | Verificada na análise estrutural |
+| Validação HTML pelo W3C | Há capturas registradas |
+| Contraste mínimo AA | Necessita de comprovação específica |
+| Navegação completa por teclado | Necessita de teste manual registrado |
 
-| Item testado | Arquivo enviado | Tempo | Resultado | Evidência |
-|---|---|---:|---|---|
-| Acessibilidade | `acessibilidade (2).html` | 6 ms | Sem erros e sem avisos | `w3c-acessibilidade.png` |
-| Contato | `contato (2).html` | 11 ms | Sem erros e sem avisos | `w3c-contato.png` |
-| CSS | `style.css` | — | Sem erros; 18 alertas informativos | `w3c-css.png` |
-| Galeria | `galeria (1).html` | 8 ms | Sem erros e sem avisos | `w3c-galeria.png` |
-| Impacto | `impacto (1).html` | 9 ms | Sem erros e sem avisos | `w3c-impacto.png` |
-| Index | `index (1).html` | 11 ms | Sem erros e sem avisos | `w3c-index.png` |
-| Mídia | `midia (1).html` | 8 ms | Sem erros e sem avisos | `w3c-midia.png` |
-| Notícias | `noticias (4).html` | 11 ms | Sem erros e sem avisos | `w3c-noticias.png` |
-| Orçamento | `orcamento_hospedagem (3).html` | 13 ms | Sem erros e sem avisos | `w3c-orcamento.png` |
-| Projetos | `projetos (3).html` | 6 ms | Sem erros e sem avisos | `w3c-projetos.png` |
-| Sobre | `sobre (1).html` | 8 ms | Sem erros e sem avisos | `w3c-sobre.png` |
+**Observação:** a validação HTML do W3C não equivale a uma avaliação completa de acessibilidade WCAG. Também é necessário verificar visualmente o contraste, o foco dos elementos e a navegação por teclado.
+
+## 3. Validação W3C — HTML e CSS
+
+A equipe realizou verificações utilizando os validadores do W3C para analisar a estrutura HTML das páginas e a folha de estilo CSS do projeto.
+
+As evidências disponíveis estão armazenadas na pasta `teste w3c/`, na raiz do repositório.
+
+### 3.1. Resumo das evidências
+
+| Item testado | Nome do registro de validação | Resultado documentado | Evidência |
+|---|---|---|---|
+| Acessibilidade | Arquivo HTML não identificado no registro anterior | Sem erros e sem avisos | `w3c-acessibilidade.png` |
+| Contato | `contato (2).html` | Sem erros e sem avisos | `w3c-contato.png` |
+| CSS | `style.css` | Sem erros; 18 alertas informativos | `w3c-css.png` |
+| Galeria | `galeria (1).html` | Sem erros e sem avisos | `w3c-galeria.png` |
+| Impacto | `impacto (1).html` | Sem erros e sem avisos | `w3c-impacto.png` |
+| Página inicial | `index (1).html` | Sem erros e sem avisos | `w3c-index.png` |
+| Mídia | `midia (1).html` | Sem erros e sem avisos | `w3c-midia.png` |
+| Notícias | `noticias (4).html` | Sem erros e sem avisos | `w3c-noticias.png` |
+| Orçamento | `orcamento_hospedagem (3).html` | Sem erros e sem avisos | `w3c-orcamento.png` |
+| Projetos | `projetos (3).html` | Sem erros e sem avisos | `w3c-projetos.png` |
+| Sobre | `sobre (1).html` | Sem erros e sem avisos | `w3c-sobre.png` |
+
 
 ### 3.2. Ferramentas utilizadas
 
 **Validação HTML**
 
-Foi utilizado o **Nu Html Checker**, versão `vnu 26.11.9`, validador oficial do W3C. Os arquivos foram enviados pela opção de upload, utilizando o parser HTML para analisar a estrutura dos documentos.
+Foi utilizado o Nu Html Checker, versão `vnu 26.11.9`, para verificar a estrutura dos documentos HTML.
 
-**Validação CSS**
-
-Foi utilizado o validador de CSS do W3C, configurado para **CSS nível 3 + SVG**, com o objetivo de verificar a folha de estilo utilizada no site.
-
-### 3.3. Teste de acessibilidade — W3C
-
-Foi realizado um teste no arquivo registrado pela equipe como `w3c-acessibilidade.png`, utilizando a ferramenta de validação W3C.
-
-A análise verificou o código HTML da página em busca de possíveis erros ou avisos. O resultado foi positivo, pois não foram encontrados erros nem avisos durante a verificação.
-
-**Resultado:** validação concluída sem apontamentos.
-
-**Evidência:** `w3c-acessibilidade.png`.
-
-*Observação: o registro disponível não informa o nome exato do arquivo HTML enviado nem o tempo de execução desse teste.*
-
-### 3.4. Validação das páginas HTML
-
-As páginas HTML foram submetidas individualmente ao Nu Html Checker. Em todas as verificações documentadas, o validador apresentou uma faixa verde com a seguinte mensagem:
+A mensagem registrada nas capturas foi:
 
 `Document checking completed. No errors or warnings to show`
 
-A mensagem indica que a ferramenta concluiu a análise sem identificar erros ou avisos nos arquivos enviados.
+**Validação CSS**
 
-#### 3.4.1. Contato
+Foi utilizado o validador de CSS do W3C, configurado para CSS nível 3 + SVG, para verificar a folha de estilos principal.
 
-- **Arquivo enviado:** `contato (2).html`;
-- **Ferramenta:** Nu Html Checker, versão `vnu 26.11.9`;
-- **Tempo de execução:** 11 milissegundos;
-- **Resultado:** nenhum erro ou aviso identificado;
-- **Conclusão:** a página foi aprovada na validação, sem necessidade de correções apontadas pela ferramenta.
-- **Evidência:** `w3c-contato.png`.
+### 3.3. Resultados individuais das páginas HTML
 
-#### 3.4.2. Galeria
+Nas capturas registradas pela equipe, as páginas apresentaram os seguintes resultados:
 
-- **Arquivo enviado:** `galeria (1).html`;
-- **Ferramenta:** Nu Html Checker, versão `vnu 26.11.9`;
-- **Tempo de execução:** aproximadamente 8 milissegundos;
-- **Resultado:** nenhum erro ou aviso identificado;
-- **Conclusão:** a página foi aprovada na validação, sem necessidade de alterações.
-- **Evidência:** `w3c-galeria.png`.
+- **Acessibilidade:** sem erros e sem avisos. O nome exato do arquivo HTML enviado não foi identificado no registro anterior.
+- **Contato:** sem erros e sem avisos; tempo registrado de 11 ms.
+- **Galeria:** sem erros e sem avisos; tempo registrado de aproximadamente 8 ms.
+- **Impacto:** sem erros e sem avisos; tempo registrado de aproximadamente 9 ms.
+- **Página inicial:** sem erros e sem avisos; tempo registrado de aproximadamente 11 ms.
+- **Mídia:** sem erros e sem avisos; tempo registrado de aproximadamente 8 ms.
+- **Notícias:** sem erros e sem avisos; tempo registrado de aproximadamente 11 ms.
+- **Orçamento:** sem erros e sem avisos; tempo registrado de aproximadamente 13 ms.
+- **Projetos:** sem erros e sem avisos; tempo registrado de aproximadamente 6 ms.
+- **Sobre:** sem erros e sem avisos; tempo registrado de aproximadamente 8 ms.
 
-#### 3.4.3. Impacto
+Os tempos acima foram mantidos conforme o registro anterior da equipe. Eles não representam uma comparação de desempenho entre as páginas.
 
-- **Arquivo enviado:** `impacto (1).html`;
-- **Ferramenta:** Nu Html Checker, versão `vnu 26.11.9`;
-- **Tempo de execução:** aproximadamente 9 milissegundos;
-- **Resultado:** nenhum erro ou aviso identificado;
-- **Conclusão:** a página passou pela validação sem exigir ajustes no código.
-- **Evidência:** `w3c-impacto.png`.
+### 3.4. Validação da folha de estilo CSS
 
-#### 3.4.4. Página inicial — Index
+A folha de estilo principal `css/style.css` foi submetida ao validador de CSS do W3C.
 
-- **Arquivo enviado:** `index (1).html`;
-- **Ferramenta:** Nu Html Checker, versão `vnu 26.11.9`;
-- **Tempo de execução:** aproximadamente 11 milissegundos;
-- **Resultado:** nenhum erro ou aviso identificado;
-- **Conclusão:** a página inicial foi aprovada na validação, sem necessidade de correções apontadas pela ferramenta.
-- **Evidência:** `w3c-index.png`.
-
-#### 3.4.5. Mídia
-
-- **Arquivo enviado:** `midia (1).html`;
-- **Ferramenta:** Nu Html Checker, versão `vnu 26.11.9`;
-- **Tempo de execução:** aproximadamente 8 milissegundos;
-- **Resultado:** nenhum erro ou aviso identificado;
-- **Conclusão:** a página foi aprovada na validação, sem apontamentos que exigissem alterações.
-- **Evidência:** `w3c-midia.png`.
-
-#### 3.4.6. Notícias
-
-- **Arquivo enviado:** `noticias (4).html`, correspondente à quarta versão do arquivo;
-- **Ferramenta:** Nu Html Checker, versão `vnu 26.11.9`;
-- **Tempo de execução:** aproximadamente 11 milissegundos;
-- **Resultado:** nenhum erro ou aviso identificado;
-- **Conclusão:** mesmo na quarta versão do arquivo, a página foi aprovada sem problemas apontados pelo validador.
-- **Evidência:** `w3c-noticias.png`.
-
-#### 3.4.7. Orçamento
-
-- **Arquivo enviado:** `orcamento_hospedagem (3).html`;
-- **Ferramenta:** Nu Html Checker, versão `vnu 26.11.9`;
-- **Tempo de execução:** aproximadamente 13 milissegundos;
-- **Resultado:** nenhum erro ou aviso identificado;
-- **Conclusão:** a página foi validada sem apontamentos, não sendo necessárias correções indicadas pela ferramenta.
-- **Evidência:** `w3c-orcamento.png`.
-
-#### 3.4.8. Projetos
-
-- **Arquivo enviado:** `projetos (3).html`;
-- **Ferramenta:** Nu Html Checker, versão `vnu 26.11.9`;
-- **Tempo de execução:** aproximadamente 6 milissegundos;
-- **Resultado:** nenhum erro ou aviso identificado;
-- **Conclusão:** foi a validação HTML mais rápida entre as registradas, e a página não precisou de alterações.
-- **Evidência:** `w3c-projetos.png`.
-
-#### 3.4.9. Sobre
-
-- **Arquivo enviado:** `sobre (1).html`;
-- **Ferramenta:** Nu Html Checker, versão `vnu 26.11.9`;
-- **Tempo de execução:** aproximadamente 8 milissegundos;
-- **Resultado:** nenhum erro ou aviso identificado;
-- **Conclusão:** a página foi aprovada na validação, sem necessidade de correções.
-- **Evidência:** `w3c-sobre.png`.
-
-### 3.5. Validação da folha de estilo CSS
-
-A equipe também realizou a validação da folha de estilo principal do projeto, `style.css`, utilizando o validador de CSS do W3C, configurado para CSS nível 3 + SVG.
-
-O resultado apresentou uma faixa verde com a seguinte mensagem:
+O resultado registrado apresentou a mensagem:
 
 `Parabéns! Não foram encontrados erros na sua folha de estilo`
 
-Durante a análise, foram identificados 18 alertas informativos. Esses alertas não foram classificados como erros e não impediram a aprovação da folha de estilo.
+Durante a análise, foram identificados 18 alertas informativos, que não foram classificados como erros.
 
-O validador também disponibilizou a possibilidade de utilizar o selo **CSS válido** do W3C no site, caso a equipe desejasse.
-
-- **Arquivo testado:** `style.css`;
-- **Ferramenta:** validador de CSS do W3C;
+- **Arquivo registrado:** `style.css`;
+- **Ferramenta:** validador CSS do W3C;
 - **Configuração:** CSS nível 3 + SVG;
-- **Resultado:** nenhum erro identificado e 18 alertas informativos;
-- **Conclusão:** folha de estilo aprovada, sem necessidade de alterações apontadas pelo validador.
-- **Evidência:** `w3c-css.png`.
+- **Resultado registrado:** nenhum erro e 18 alertas informativos;
+- **Evidência:** `teste w3c/w3c-css.png`.
 
-### 3.6. Conclusão das validações W3C
+### 3.5. Localização das capturas
 
-Os registros apresentam resultados positivos para as dez páginas HTML e para a folha de estilo CSS.
+As capturas estão disponíveis nos seguintes caminhos do repositório:
 
-As páginas HTML foram aprovadas sem erros ou avisos, enquanto o CSS foi aprovado sem erros, apresentando 18 alertas informativos.
+- `teste w3c/w3c-acessibilidade.png`
+- `teste w3c/w3c-contato.png`
+- `teste w3c/w3c-css.png`
+- `teste w3c/w3c-galeria.png`
+- `teste w3c/w3c-impacto.png`
+- `teste w3c/w3c-index.png`
+- `teste w3c/w3c-midia.png`
+- `teste w3c/w3c-noticias.png`
+- `teste w3c/w3c-orcamento.png`
+- `teste w3c/w3c-projetos.png`
+- `teste w3c/w3c-sobre.png`
 
-Dessa forma, os resultados documentados atendem ao critério de aceitação de validar o código HTML e CSS no W3C Validator sem erros.
+**Conclusão das evidências W3C:** as capturas registram resultados positivos nas verificações anteriores. Entretanto, como os nomes dos arquivos enviados ao validador indicam cópias de versões anteriores, é necessário executar novamente a validação nos dez arquivos HTML e no CSS da versão final.
 
 ## 4. Testes de responsividade
 
-O grupo realizou testes de responsividade para verificar a adaptação do site a diferentes tamanhos de tela e resoluções.
+Foram realizados testes de visualização no navegador Chromium para observar a adaptação do site a diferentes larguras de tela.
 
-Durante as verificações, foram observados o posicionamento dos elementos, a organização do conteúdo, a navegação e a adaptação do menu.
-
-Na página inicial, foram registradas as seguintes verificações no Chromium:
+Na página inicial, foram registradas as seguintes verificações:
 
 | Largura de tela | Resultado registrado |
 |---:|---|
 | 1280 px | Página aberta para verificação em resolução de computador |
-| 390 px | Sem rolagem horizontal; menu adaptado para apresentação compacta |
+| 390 px | Não foi registrada rolagem horizontal; menu adaptado para apresentação compacta |
 
-Durante os testes, o grupo constatou que o site se adapta adequadamente às dimensões de tela utilizadas, mantendo sua organização visual e usabilidade.
+Durante a verificação, foram observados o posicionamento dos elementos, a organização do conteúdo e a adaptação do menu.
 
-**Resultado:** os testes de responsividade realizados pelo grupo foram concluídos com sucesso.
+**Resultado registrado:** a página inicial foi verificada em uma resolução de computador e em uma largura menor, sem rolagem horizontal na largura de 390 px.
 
-*Observação: o registro detalhado das larguras de 1280 px e 390 px refere-se à página inicial. Não há, neste documento, uma relação individual de todas as páginas verificadas em cada resolução.*
+**Limitação:** não há registro individual das dez páginas testadas em diferentes resoluções. Portanto, não é possível afirmar, com base nas evidências disponíveis, que todas foram verificadas em dispositivos móveis.
 
-## 5. Observação sobre o JavaScript
+Recomenda-se testar também as demais páginas em larguras de celular, tablet e computador, registrando capturas de tela.
 
-O código JavaScript analisado contém implementações de validação do formulário, armazenamento de rascunho em `localStorage` e diversas interações com o DOM.
+## 5. Verificação das funcionalidades JavaScript
 
-Entre os recursos identificados no código estão:
+A análise do arquivo `js/main.js` identificou diferentes funcionalidades implementadas no projeto.
 
-- Validação dos campos do formulário;
-- Verificação do formato básico de e-mail;
-- Verificação de tamanho mínimo;
-- Armazenamento e recuperação de rascunhos utilizando `localStorage`;
-- Definição do atributo `aria-invalid="true"` para indicar campos inválidos;
-- Envio de informações ao Formspree por meio de requisição assíncrona.
-
-A análise do código confirma a presença dessas rotinas, mas não comprova, por si só, que todos os comportamentos funcionem corretamente na versão publicada.
-
-Também foram identificados alguns pontos de atenção:
-
-- Não há verificação explícita dos padrões de telefone e CEP;
-- O destaque visual de campos inválidos depende de regras CSS correspondentes ao atributo `aria-invalid`;
-- O envio ao Formspree depende de conexão, configuração válida do endpoint e resposta do serviço;
-- O rascunho é armazenado no navegador e inclui os valores dos campos do formulário.
-
-**Resultado:** foram identificadas as implementações no código, mas testes funcionais completos dessas rotinas não estão comprovados pelos registros disponíveis.
-
-## 6. Conferência pública do GitHub
-
-Foi realizada uma conferência da página principal do repositório público para observar sua disponibilidade e estrutura geral.
-
-| Verificação | Resultado observado |
+| Funcionalidade | Implementação identificada |
 |---|---|
-| Acesso ao repositório | Repositório público e acessível |
-| Estrutura principal | Dez arquivos HTML e pastas `assets/`, `css/`, `docs/`, `img/` e `js/` visíveis na raiz |
-| Histórico de commits | A página exibia cinco commits na consulta |
+| Menu de navegação | Interação para abrir e fechar o menu em telas menores |
+| Menu dropdown | Exibição e controle de menus suspensos |
+| Efeitos de rolagem | Elementos revelados conforme a rolagem da página |
+| Contadores animados | Atualização dos números durante a exibição |
+| Filtros da galeria | Filtragem de peças por categoria |
+| Lightbox | Exibição ampliada de imagens em uma janela de diálogo |
+| Newsletter | Mensagem informando que o formulário é demonstrativo |
+| Formulário de contato | Validação personalizada e envio assíncrono |
+| `localStorage` | Armazenamento e recuperação de rascunhos do formulário |
 
-A conferência permitiu verificar a disponibilidade do repositório e a organização geral dos arquivos apresentados na página inicial.
+### 5.1. Validação do formulário
 
-Entretanto, a visualização do repositório não substitui os testes funcionais, de acessibilidade, responsividade ou validação W3C.
+No arquivo `contato.html`, o formulário utiliza o atributo `novalidate`, deixando a validação sob responsabilidade do JavaScript.
 
-## 7. Conferência do inventário do repositório
+No arquivo `js/main.js`, foram identificadas as seguintes rotinas:
 
-A página principal do repositório público apresenta os dez arquivos HTML, o `favicon.svg` e as pastas `assets/`, `css/`, `docs/`, `img/` e `js/`.
+- Interceptação do envio com `preventDefault()`;
+- Verificação de campos obrigatórios;
+- Verificação básica do formato de e-mail;
+- Verificação do comprimento mínimo dos campos que possuem `minlength`;
+- Exibição de mensagens de erro;
+- Utilização de `aria-invalid="true"` nos campos inválidos;
+- Direcionamento do foco para o primeiro campo inválido;
+- Envio dos dados ao Formspree por meio de `fetch()`;
+- Exibição de mensagem de sucesso ou alerta de falha.
 
-O README do repositório identifica também os seguintes arquivos:
+**Resultado da análise:** as rotinas estão presentes no código-fonte. O funcionamento completo do envio, entretanto, depende de teste prático na versão publicada e de uma resposta válida do serviço Formspree.
 
-- `css/style.css`;
-- `assets/video/mutirao-troca.mp4`;
-- `assets/audio/depoimento-participante.mp3`;
-- `img/poster-mutirao.png`.
+### 5.2. Armazenamento com localStorage
 
-| Item | Situação |
+O código utiliza a chave `trocaverde-draft` para armazenar os valores preenchidos no formulário.
+
+Foram identificadas rotinas para:
+
+- Salvar os dados durante o preenchimento;
+- Recuperar os valores armazenados ao carregar a página;
+- Restaurar os campos do formulário;
+- Remover o rascunho após o envio bem-sucedido.
+
+**Resultado da análise:** as rotinas de armazenamento e recuperação estão implementadas no JavaScript. É necessário realizar o teste manual de preenchimento, recarregamento e recuperação dos dados para comprovar o funcionamento na versão publicada.
+
+### 5.3. Pontos de atenção identificados
+
+A análise do código também identificou alguns aspectos que merecem testes complementares:
+
+- Os padrões de telefone e CEP estão definidos no HTML, mas não são verificados explicitamente pela validação personalizada do JavaScript.
+- O formulário utiliza `novalidate`, portanto os padrões nativos desses campos não são aplicados automaticamente no envio.
+- É necessário verificar se os campos inválidos recebem o destaque visual esperado.
+- O envio ao Formspree depende da configuração do endpoint, da conexão e da resposta do serviço.
+- O armazenamento do rascunho inclui os valores dos campos preenchidos, sendo importante avaliar quais informações precisam permanecer salvas no navegador.
+
+## 6. Conferência do repositório GitHub
+
+Foi realizada uma consulta à estrutura pública do repositório para conferir os arquivos e diretórios existentes.
+
+**Repositório:** `igorbatista-dev/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE`
+
+A estrutura atual apresenta:
+
+- Dez páginas HTML;
+- Arquivo `README.md` na raiz;
+- Arquivo `favicon.svg`;
+- Pasta `assets/`, com arquivos de áudio, vídeo e legenda;
+- Pasta `css/`, com `style.css`;
+- Pasta `docs/`, com seis documentos complementares;
+- Pasta `img/`, com imagens utilizadas no site;
+- Pasta `js/`, com `main.js`;
+- Pasta `teste w3c/`, com onze capturas de validação.
+
+### 6.1. Versionamento
+
+Na consulta realizada em 15/11/2026, foram identificados commits recentes de integrantes da equipe, demonstrando atualizações no repositório.
+
+Entretanto, a consulta também identificou:
+
+| Item | Resultado observado |
 |---|---|
-| Dez páginas HTML | Listadas na raiz do repositório |
-| `favicon.svg` | Listado na raiz do repositório |
-| Pastas `assets/`, `css/`, `docs/`, `img/` e `js/` | Listadas na raiz do repositório |
-| Arquivos internos das pastas | Conferência completa ainda necessária diretamente no GitHub |
-| Seis documentos de apoio em `docs/` | Relação documentada; confirmar presença e versão de cada arquivo no diretório |
+| Repositório público | Disponível |
+| Branch principal | `main` |
+| Outras branches | Não identificadas na consulta |
+| Pull requests | Nenhum identificado na consulta |
+| Histórico de commits | Há registros de alterações realizados por integrantes da equipe |
 
-A listagem da raiz comprova apenas a presença dos diretórios, não a integridade nem a execução dos arquivos internos.
+**Ponto de atenção:** a atividade exige commits de todos os integrantes, mensagens descritivas e pelo menos uma branch com pull request. É necessário conferir o histórico completo para comprovar a participação dos seis integrantes e criar uma branch com pull request caso esse requisito ainda não tenha sido cumprido.
 
-## 8. Considerações finais
+### 6.2. Publicação do site
 
-Os testes realizados permitiram verificar diferentes aspectos do projeto Trocaverde, incluindo navegação, estrutura HTML, acessibilidade estrutural, responsividade, validação de código pelo W3C e organização do repositório.
+O README apresenta a seguinte URL de publicação:
 
-Os resultados documentados demonstram que:
+`https://trocaverde.up.railway.app/`
 
-- Não foram encontrados links internos quebrados nas dez páginas verificadas;
-- As dez páginas HTML passaram pela validação do Nu Html Checker sem erros ou avisos;
-- A folha de estilo `style.css` passou pela validação do W3C sem erros, apresentando 18 alertas informativos;
-- O teste de acessibilidade registrado pela equipe apresentou resultado positivo, sem erros ou avisos;
-- Os testes de responsividade realizados pelo grupo foram concluídos com sucesso;
-- Foram identificadas no código JavaScript rotinas de interação, armazenamento e validação de formulários, embora sua presença não represente comprovação de funcionamento integral;
-- A conferência pública do GitHub permitiu observar a disponibilidade e a estrutura principal do repositório.
+A existência desse endereço está documentada no repositório. A disponibilidade atual do site, o acesso HTTPS e o funcionamento das dez páginas online precisam ser conferidos diretamente no navegador.
 
-Dessa forma, os resultados registrados indicam que o projeto apresenta uma estrutura consistente nos aspectos avaliados e atende ao critério de validação HTML e CSS pelo W3C sem erros.
+## 7. Conclusão
 
-Como continuidade, recomenda-se ampliar os testes funcionais do JavaScript, verificar manualmente a navegação por teclado e leitores de tela, conferir todas as páginas em diferentes resoluções e realizar a conferência completa dos arquivos internos do repositório.
+As verificações registradas durante o desenvolvimento do Trocaverde permitiram analisar a estrutura das páginas, a navegação, os elementos HTML, a responsividade e a implementação das funcionalidades JavaScript.
+
+Os registros disponíveis indicam que:
+
+- Foi realizada uma verificação automática dos links internos das dez páginas, sem problemas registrados;
+- Foram realizadas verificações estruturais de HTML e identificação de elementos acessíveis;
+- Existem capturas de validação W3C para as dez páginas HTML e para a folha de estilo CSS;
+- As capturas anteriores registram ausência de erros e avisos nas páginas HTML e ausência de erros no CSS;
+- A página inicial foi verificada em larguras de 1280 px e 390 px, sem rolagem horizontal registrada na menor largura;
+- O código JavaScript contém rotinas de interação, validação de formulário e armazenamento de rascunhos com `localStorage`;
+- O repositório possui uma estrutura organizada, com documentação e evidências separadas.
+
+Apesar dos resultados positivos registrados, ainda é necessário repetir as validações W3C na versão final, executar os testes funcionais do formulário, comprovar a recuperação do `localStorage`, verificar a navegação por teclado e registrar os testes de contraste e acessibilidade.
+
+Também é necessário conferir a disponibilidade do site publicado e completar a comprovação dos requisitos de versionamento no GitHub.
+
+Dessa forma, este documento diferencia os resultados já registrados das verificações que ainda precisam ser realizadas, evitando considerar uma funcionalidade aprovada apenas por sua presença no código-fonte.
