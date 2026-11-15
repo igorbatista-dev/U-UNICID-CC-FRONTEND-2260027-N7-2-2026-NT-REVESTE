@@ -1,55 +1,64 @@
 # Diário de bordo — Trocaverde
 
-Este diário reúne decisões, aprendizados, dificuldades e atividades registradas durante o desenvolvimento. As entradas abaixo se limitam às informações presentes nos documentos e evidências consultados.
+Este diário reúne decisões, atividades, verificações e aprendizados registrados durante o desenvolvimento do Trocaverde. As entradas distinguem atividades documentadas de pontos que ainda dependem de confirmação.
 
 ## 21/09/2026 — Definição do projeto e do escopo
 
-- **Tema escolhido:** moda circular e troca de roupas. A escolha permitiu distribuir o conteúdo entre as dez páginas previstas, abordando galeria de peças, impacto ambiental, notícias sobre *fast fashion* e acessibilidade.
+- **Tema escolhido:** moda circular e troca de roupas.
 - **Proposta:** apresentar uma rede comunitária de troca e reaproveitamento de roupas, incentivando o consumo consciente e a economia circular.
-- **Estrutura inicial:** site estático em HTML e CSS, com dez páginas interligadas.
-- **Identidade visual:** combinação de tons de verde, terracota e bege, associando sustentabilidade, tecido e artesanato.
-- **Galeria:** foram previstas ilustrações em SVG enquanto a equipe não tivesse fotografias próprias das peças.
-- **Hospedagem:** GitHub Pages foi indicado como alternativa preferencial por oferecer hospedagem gratuita para site estático e HTTPS.
+- **Estrutura inicial:** site com dez páginas interligadas, inicialmente planejado com HTML e CSS.
+- **Identidade visual:** combinação de tons de verde, terracota e bege.
+- **Galeria:** previsão de ilustrações enquanto não houvesse fotografias próprias das peças.
+- **Hospedagem:** Railway foi registrado como alternativa de hospedagem para site estático.
 
 ## 26/10/2026 — Verificações registradas
 
-- Foi executada uma verificação automática dos links internos das dez páginas. O relatório registra ausência de links quebrados.
-- Foram conferidos, nas dez páginas, elementos estruturais como `lang="pt-BR"`, título, meta description, um `<h1>`, regiões semânticas e associação entre `label` e `id`.
-- O relatório também registra que não foram encontrados elementos `<img>` sem atributo `alt`; as ilustrações SVG da galeria possuem identificação acessível.
-- A página inicial foi aberta no Chromium em larguras de 1280 px e 390 px. O registro informa ausência de rolagem horizontal na largura menor.
+- Foi executada uma verificação automática dos links internos das dez páginas, sem registro de links quebrados.
+- Foram conferidos elementos estruturais como `lang="pt-BR"`, título, meta description, um `<h1>`, regiões semânticas e associação entre `label` e `id`.
+- O relatório registra ausência de elementos `<img>` sem atributo `alt` e identificação acessível das ilustrações SVG.
+- A página inicial foi aberta no Chromium em larguras de 1280 px e 390 px. Na largura menor, não foi registrada rolagem horizontal.
 - Permaneceram pendentes a validação formal no W3C, os testes com teclado e leitor de tela, a verificação de contraste e os testes completos do formulário.
 
-## 09/11/2026 — Revisão da documentação para a A2
+## 09/11/2026 — Revisão para a entrega A2
 
-- A documentação foi reorganizada para refletir os requisitos da segunda entrega.
-- Foi analisado o código JavaScript fornecido pela equipe, que contém interações para menu dropdown, efeitos de revelação ao rolar, contadores animados, filtros e lightbox da galeria.
-- No formulário, o código restaura e salva rascunhos com `localStorage`, controla a exibição do campo de quantidade de peças, atualiza o contador de caracteres, valida campos obrigatórios/e-mail/tamanho mínimo e envia os dados ao Formspree por `fetch()`.
-- A análise do código permite identificar a implementação prevista, mas não substitui a execução dos testes no navegador.
-- Foram identificados pontos a conferir: validação explícita de telefone e CEP, estilo visual dos campos com `aria-invalid`, disponibilidade do elemento de sucesso para foco e envio efetivo pelo Formspree.
-- Foi criado um registro específico para o uso de IA nesta revisão documental, sem atribuir à ferramenta atividades anteriores que não estejam documentadas.
+- A documentação foi revisada para refletir a presença de JavaScript na versão atual.
+- Foram identificadas no código rotinas de menu dropdown, efeitos de revelação durante a rolagem, contadores animados, filtros e lightbox da galeria.
+- No formulário, foram identificadas rotinas de armazenamento e restauração de rascunho com `localStorage`, exibição condicional de campo, contador de caracteres, validação e envio ao Formspree por `fetch()`.
+- A análise estática do código não foi tratada como prova de que todos os comportamentos funcionam na versão publicada.
+- Foram destacados pontos a conferir, como validação de telefone e CEP, estilo dos campos inválidos, foco na mensagem de sucesso e envio efetivo pelo Formspree.
+- Foi organizado o registro de uso de Inteligência Artificial, distinguindo sugestões da ferramenta das decisões e validações da equipe.
 
+## 09/11/2026 — Conferência do repositório
 
-## 09/11/2026 — Conferência do repositório público
+- Foi consultada a página pública do repositório GitHub.
+- A página principal apresentava dez arquivos HTML e as pastas `assets/`, `css/`, `docs/`, `img/` e `js/`.
+- O README foi identificado como desatualizado em pontos relacionados à primeira entrega, especialmente na descrição do JavaScript como opcional.
+- Foi identificada a necessidade de padronizar a descrição do projeto como rede comunitária de troca e reaproveitamento, evitando a interpretação de que se trata de uma loja convencional.
+- A existência de publicação HTTPS, de branch com pull request e a conclusão de todos os testes não foram consideradas comprovadas apenas pela listagem da raiz.
 
-- O repositório do projeto foi disponibilizado publicamente no GitHub.
-- Na página principal foram identificados dez arquivos HTML e as pastas `assets/`, `css/`, `docs/`, `img/` e `js/`.
-- A página do repositório exibia cinco commits no momento da consulta. Esse dado é apenas um retrato da consulta; é necessário verificar o histórico completo e a participação de todos os integrantes.
-- O README da raiz ainda continha descrições da primeira entrega, como JavaScript opcional e pasta `js/` reservada. Essas informações precisam ser substituídas por uma descrição compatível com a A2.
-- A descrição curta do repositório menciona venda de roupas sustentáveis, enquanto o conteúdo do README apresenta uma rede comunitária de troca e reaproveitamento. Foi recomendada a padronização da descrição.
-- A publicação do site em HTTPS, a existência de branch com pull request e a conclusão dos testes não foram comprovadas apenas pela página inicial do repositório.
+## 15/11/2026 — Atualização da documentação com base no repositório
+
+- O README e os documentos complementares foram reorganizados para acompanhar a estrutura e as funcionalidades descritas no repositório.
+- O objetivo e o escopo foram alinhados à proposta informativa e comunitária do Trocaverde.
+- As funcionalidades JavaScript foram descritas como recursos identificados no código, sem presumir aprovação de todos os testes.
+- As evidências foram separadas entre verificações registradas e validações ainda pendentes.
+- O orçamento foi estruturado para refletir a publicação informada no README e para evitar valores comerciais não confirmados.
+- A documentação revisada deve passar por conferência final da equipe antes de ser incorporada ao repositório.
 
 ## Aprendizados registrados
 
-- O atributo `aria-current="page"` identifica a página atual no menu e auxilia tecnologias assistivas.
-- Associar cada `<label>` ao campo correspondente melhora a compreensão e a utilização dos formulários.
+- `aria-current="page"` ajuda a identificar a página atual no menu.
+- Associar cada `<label>` ao campo correspondente melhora a compreensão e o uso dos formulários.
 - Atributos como `pattern` e `title` podem orientar o preenchimento dos campos.
-- Tabelas devem possuir título/legenda e cabeçalhos corretamente identificados para facilitar a leitura por tecnologias assistivas.
-- A documentação deve indicar quando dados são fictícios, especialmente em páginas que apresentam indicadores de impacto.
+- Tabelas devem possuir título/legenda e cabeçalhos identificados para facilitar a leitura por tecnologias assistivas.
+- Indicadores fictícios devem ser identificados claramente para não serem confundidos com resultados reais.
+- A análise do código não substitui testes funcionais realizados no navegador.
 
-## Dificuldades registradas
+## Dificuldades e pontos de atenção
 
-- Manter cabeçalho e rodapé consistentes nas dez páginas.
-- Obter materiais audiovisuais próprios dentro do prazo.
-- Substituir ilustrações por fotografias próprias ou devidamente licenciadas.
-- Apresentar indicadores fictícios de forma verossímil sem induzir o visitante a interpretá-los como resultados reais.
-- Concluir e registrar testes de acessibilidade e validação formal.
+- Manter cabeçalho, rodapé e navegação consistentes nas dez páginas.
+- Obter e organizar materiais audiovisuais e imagens adequados.
+- Distinguir conteúdo ilustrativo de informação real.
+- Conferir o comportamento do formulário e a integração com serviço externo.
+- Concluir e registrar testes de acessibilidade, responsividade e validação formal.
+- Manter a documentação sincronizada com as alterações do repositório e do site publicado.
