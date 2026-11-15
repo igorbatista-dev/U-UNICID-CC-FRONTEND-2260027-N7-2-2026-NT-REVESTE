@@ -358,7 +358,7 @@
           if (counter && textarea) counter.textContent = `0/${textarea.getAttribute('maxlength') || 800}`;
         } else {
           // ERRO DO FORMSPREE: (Ex: ID errado ou limite de envios atingido)
-          alert('Ocorreu um erro ao enviar. Verifique se o ID do Formspree está correto.');
+          alert('Ocorreu um erro ao enviar. Entre em contato com o administrador do site.');
         }
       } catch (error) {
         // ERRO DE REDE: (Ex: sem internet)
