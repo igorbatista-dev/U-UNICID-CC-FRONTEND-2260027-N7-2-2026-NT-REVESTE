@@ -69,6 +69,7 @@ O repositório está organizado em arquivos HTML, pastas de recursos visuais e a
 
 ```
 ReVeste/
+├── README.md
 ├── acessibilidade.html
 ├── contato.html
 ├── galeria.html
@@ -92,46 +93,18 @@ ReVeste/
 │   └── style.css
 │
 ├── docs/
-├── diario-de-bordo.md
-├── escopo-projeto-trocaverde.md
-├── evidencias-de-testes.md
-├── melhorias-mvp.md
-├── orcamento-hospedagem.md
-└── uso-de-ia.md
+│   ├── diario-de-bordo.md
+│   ├── escopo-projeto-trocaverde.md
+│   ├── evidencias-de-testes.md
+│   ├── melhorias-mvp.md
+│   ├── orcamento-hospedagem.md
+│   └── uso-de-ia.md
 │
 ├── img/
-│   ├── Antes-TrocaVerde.jpeg
-│   ├── BlusaSocialM.jpg
-│   ├── CalcaJeansReta40.jpg
-│   ├── CalcaMoletomG.jpg
-│   ├── CamisaBandaG.jpeg
-│   ├── CamisaLinhoP.jpeg
-│   ├── CamisaListradaM.jpeg
-│   ├── CasacoLaG.jpg
-│   ├── JaquetaJeansM.jpg
-│   ├── QRcode.png
-│   ├── Site_Depois_TrocaVerde.jpeg
-│   ├── TenisBranco38.jpg
-│   ├── VestidoFloralM.jpg
-│   ├── VestidoLongoM.jpg
-│   ├── noticia-animale.jpg
-│   └── poster_relato_video.jpg
-│
 ├── js/
 │   └── main.js
 │
 └── teste w3c/
-    ├── w3c-acessibilidade.png
-    ├── w3c-contato.png
-    ├── w3c-css.png
-    ├── w3c-galeria.png
-    ├── w3c-impacto.png
-    ├── w3c-index.png
-    ├── w3c-midia.png
-    ├── w3c-noticias.png
-    ├── w3c-orcamento.png
-    ├── w3c-projetos.png
-    └── w3c-sobre.png
 ```
 
 ### Organização dos diretórios e arquivos
