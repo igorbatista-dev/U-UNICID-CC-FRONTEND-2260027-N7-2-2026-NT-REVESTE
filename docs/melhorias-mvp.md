@@ -25,8 +25,8 @@ Assim, não são atribuídas correções específicas à equipe sem uma compara�
 
 As capturas de tela abaixo podem ser utilizadas para demonstrar a evolução visual entre o MVP e a versão posterior:
 
-- [Print de antes](img/antes-TrocaVerde.jpeg)
-- [Print de depois](img/Site_Depois_TrocaVerde.jpeg)
+[Print de antes](../img/Antes-TrocaVerde.jpeg)
+[Print de depois](../img/Site_Depois_TrocaVerde.jpeg)
 
 ## 3. Melhorias exigidas pela atividade A2
 
