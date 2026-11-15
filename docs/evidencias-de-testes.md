@@ -49,7 +49,7 @@ Os registros foram documentados por meio de capturas de tela, permitindo consult
 
 | Item testado | Arquivo enviado | Tempo | Resultado | Evidência |
 |---|---|---:|---|---|
-| Acessibilidade | Não informado no registro | — | Sem erros e sem avisos | `w3c-acessibilidade.png` |
+| Acessibilidade | `acessibilidade (2).html` | 6 ms | Sem erros e sem avisos | `w3c-acessibilidade.png` |
 | Contato | `contato (2).html` | 11 ms | Sem erros e sem avisos | `w3c-contato.png` |
 | CSS | `style.css` | — | Sem erros; 18 alertas informativos | `w3c-css.png` |
 | Galeria | `galeria (1).html` | 8 ms | Sem erros e sem avisos | `w3c-galeria.png` |
