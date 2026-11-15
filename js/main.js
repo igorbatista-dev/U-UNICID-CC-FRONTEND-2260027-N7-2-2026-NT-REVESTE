@@ -12,66 +12,103 @@
     onScroll();
   }
 
-  /* ---------- Menu Mobile e Dropdown ---------- */
-  const navToggle = document.getElementById('nav-toggle');
+  /* ---------- Menu responsivo e dropdown acessível ---------- */
+  const navToggle = document.querySelector('.nav-toggle-button');
   const siteHeader = document.querySelector('.site-header');
+  const mainNav = document.querySelector('.main-nav');
   const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
   const hasDropdowns = document.querySelectorAll('.has-dropdown');
+  const mobileNav = window.matchMedia('(max-width: 900px)');
 
-  // Função robusta para fechar todos os dropdowns
-  const closeAllDropdowns = () => {
+  const closeAllDropdowns = (restoreFocus = false) => {
     hasDropdowns.forEach(item => {
       item.classList.remove('is-open');
       const btn = item.querySelector('.dropdown-toggle');
+      const menu = item.querySelector('.dropdown');
       if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (menu) menu.hidden = true;
+      if (restoreFocus && btn) btn.focus();
     });
   };
 
-  // Configura os botões de dropdown
+  const closeMobileNav = (restoreFocus = false) => {
+    if (!navToggle || !siteHeader) return;
+    siteHeader.classList.remove('menu-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Abrir menu de navegação');
+    closeAllDropdowns();
+    if (restoreFocus) navToggle.focus();
+  };
+
+  if (navToggle && siteHeader && mainNav) {
+    navToggle.addEventListener('click', () => {
+      const willOpen = navToggle.getAttribute('aria-expanded') !== 'true';
+      siteHeader.classList.toggle('menu-open', willOpen);
+      navToggle.setAttribute('aria-expanded', String(willOpen));
+      navToggle.setAttribute('aria-label', willOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+      if (!willOpen) closeAllDropdowns();
+    });
+
+    document.addEventListener('click', (event) => {
+      if (mobileNav.matches && navToggle.getAttribute('aria-expanded') === 'true' && !siteHeader.contains(event.target)) {
+        closeMobileNav();
+      }
+    });
+
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => closeMobileNav());
+    });
+
+    mobileNav.addEventListener?.('change', (event) => {
+      if (!event.matches) closeMobileNav();
+    });
+  }
+
+  const closeDropdown = (item, restoreFocus = false) => {
+    if (!item) return;
+    item.classList.remove('is-open');
+    const btn = item.querySelector('.dropdown-toggle');
+    const menu = item.querySelector('.dropdown');
+    if (btn) { btn.setAttribute('aria-expanded', 'false'); if (restoreFocus) btn.focus(); }
+    if (menu) menu.hidden = true;
+  };
+
   dropdownToggles.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault(); // Evita qualquer comportamento estranho
-      e.stopPropagation(); // Impede que o clique chegue ao document
-      
-      const parentLi = btn.closest('.has-dropdown');
-      // Verifica se ESTE menu específico já está aberto
-      const isOpen = parentLi.classList.contains('is-open');
-      
-      // Fecha todos primeiro
+    const parent = btn.closest('.has-dropdown');
+    const menu = parent?.querySelector('.dropdown');
+    if (menu) menu.hidden = true;
+    btn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
       closeAllDropdowns();
-      
-      // Se não estava aberto, abre ele
-      if (!isOpen) {
-        parentLi.classList.add('is-open');
+      if (!isOpen && parent && menu) {
+        parent.classList.add('is-open');
         btn.setAttribute('aria-expanded', 'true');
+        menu.hidden = false;
       }
     });
   });
 
-  // Fecha dropdowns ao clicar em qualquer lugar fora deles
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.has-dropdown')) {
-      closeAllDropdowns();
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.has-dropdown')) closeAllDropdowns();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    const openedDropdown = document.querySelector('.has-dropdown.is-open');
+    if (openedDropdown) {
+      event.preventDefault();
+      closeDropdown(openedDropdown, true);
+      return;
     }
-    // Fecha o menu hamburguer no celular se clicar fora
-    if (navToggle && navToggle.checked && !siteHeader.contains(e.target)) {
-      navToggle.checked = false;
+    if (navToggle?.getAttribute('aria-expanded') === 'true') {
+      event.preventDefault();
+      closeMobileNav(true);
     }
   });
 
-  // Adiciona a classe de sublinhado se uma página interna estiver ativa
   hasDropdowns.forEach(item => {
-    if (item.querySelector('a[aria-current="page"]')) {
-      item.classList.add('has-current');
-    }
-  });
-
-  // Fecha o menu hamburguer ao clicar em qualquer link
-  document.querySelectorAll('.main-nav a').forEach((link) => {
-    link.addEventListener('click', () => {
-      if (navToggle) navToggle.checked = false;
-      closeAllDropdowns(); // Garante que o dropdown feche ao navegar
-    });
+    if (item.querySelector('a[aria-current="page"]')) item.classList.add('has-current');
   });
 
   /* ---------- Reveal ao rolar ---------- */
@@ -131,33 +168,49 @@
     });
   }
 
-  /* ---------- Galeria: lightbox ---------- */
+  /* ---------- Galeria: lightbox acessível ---------- */
   const dialog = document.getElementById('lightbox');
   if (dialog && typeof dialog.showModal === 'function') {
     const content = dialog.querySelector('.lightbox-content');
     const captionEl = dialog.querySelector('.lightbox-caption');
     const closeBtn = dialog.querySelector('.close');
+    let lastTrigger = null;
 
-    const openLightbox = (fig) => {
-      const swatch = fig.querySelector('.swatch');
-      content.innerHTML = swatch ? swatch.innerHTML : '';
-      captionEl.textContent = fig.querySelector('figcaption')?.textContent || '';
+    const openLightbox = (trigger) => {
+      const figure = trigger.closest('figure');
+      const swatch = figure?.querySelector('.swatch');
+      if (!swatch) return;
+      lastTrigger = trigger;
+      content.innerHTML = swatch.innerHTML;
+      const originalCaption = figure.querySelector('.gallery-caption');
+      captionEl.replaceChildren();
+      if (originalCaption) captionEl.append(originalCaption.cloneNode(true));
       dialog.showModal();
+      closeBtn?.focus();
     };
 
-    document.querySelectorAll('[data-lightbox]').forEach((fig) => {
-      fig.addEventListener('click', () => openLightbox(fig));
-      fig.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openLightbox(fig);
-        }
-      });
+    document.querySelectorAll('[data-lightbox]').forEach(trigger => {
+      trigger.addEventListener('click', () => openLightbox(trigger));
     });
 
-    if (closeBtn) closeBtn.addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+    closeBtn?.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+    dialog.addEventListener('close', () => {
+      if (lastTrigger?.isConnected) lastTrigger.focus();
+      lastTrigger = null;
+    });
   }
+
+  /* ---------- Newsletter: aviso acessível sem simular envio ---------- */
+  document.querySelectorAll('[data-newsletter-form]').forEach(newsletter => {
+    newsletter.addEventListener('submit', event => {
+      event.preventDefault();
+      const status = newsletter.parentElement.querySelector('.newsletter-status');
+      if (!status) return;
+      status.textContent = 'Este formulário é demonstrativo: o serviço de inscrição ainda não está conectado. Nenhum e-mail foi enviado.';
+      status.hidden = false;
+    });
+  });
 
   /* ---------- Formulário de contato ---------- */
   const form = document.getElementById('contact-form');
