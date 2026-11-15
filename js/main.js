@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 /* Trocaverde — interações (menu, reveal, contador, galeria, formulário) */
 (() => {
   'use strict';
