@@ -67,7 +67,7 @@ Na página principal do repositório foram identificados os dez arquivos HTML e 
 
 O repositório está organizado em arquivos HTML, pastas de recursos visuais e audiovisuais, folhas de estilo, scripts JavaScript, documentação e evidências de validação. Essa organização facilita a manutenção do código e a identificação dos materiais utilizados no desenvolvimento do Trocaverde.
 
-```text
+```
 ReVeste/
 ├── acessibilidade.html
 ├── contato.html
@@ -92,13 +92,12 @@ ReVeste/
 │   └── style.css
 │
 ├── docs/
-│   ├── README.md
-│   ├── diario-de-bordo.md
-│   ├── escopo-projeto-trocaverde.md
-│   ├── evidencias-de-testes.md
-│   ├── melhorias-mvp.md
-│   ├── orcamento-hospedagem.md
-│   └── uso-de-ia.md
+├── diario-de-bordo.md
+├── escopo-projeto-trocaverde.md
+├── evidencias-de-testes.md
+├── melhorias-mvp.md
+├── orcamento-hospedagem.md
+└── uso-de-ia.md
 │
 ├── img/
 │   ├── Antes-TrocaVerde.jpeg
@@ -148,7 +147,8 @@ ReVeste/
 | `img/` | Imagens utilizadas nas páginas, incluindo peças da galeria, materiais ilustrativos e registros de antes e depois do MVP. |
 | `js/` | Scripts JavaScript responsáveis pelas validações, interações e funcionalidades dinâmicas do site. |
 | `teste w3c/` | Capturas de tela das validações das páginas realizadas no W3C Validator. |
-| `favicon.svg` | Ícone de identificação do site exibido na aba do navegador.</text>
+| `favicon.svg` | Ícone de identificação do site exibido na aba do navegador.
+
 
 ## Distribuição de responsabilidades
 
