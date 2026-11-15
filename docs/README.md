@@ -24,7 +24,7 @@ O **Trocaverde** é uma proposta de rede comunitária para troca e reaproveitame
 ## Links do projeto
 
 - **Site publicado:** [https://trocaverde.up.railway.app/](https://trocaverde.up.railway.app/)
-- **Repositório GitHub:** [https://github.com/CaioEduhz/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE](https://github.com/CaioEduhz/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE)
+- **Repositório GitHub:** [https://github.com/igorbatista-dev/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE.git](https://github.com/igorbatista-dev/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE.git)
 
 ## Objetivo
 
@@ -63,70 +63,92 @@ Desenvolver um site informativo, responsivo e acessível, composto por dez pági
 
 Na página principal do repositório foram identificados os dez arquivos HTML e as pastas `assets/`, `css/`, `docs/`, `img/` e `js/`. A listagem pública confirma a existência das pastas, mas não permite afirmar, nesta revisão, que todos os arquivos internos estejam completos ou atualizados.
 
-## Estrutura completa do repositório
+## Estrutura do repositório
 
-A estrutura abaixo reúne os dez arquivos HTML informados pela equipe e os arquivos/pastas que aparecem na página principal do repositório público. Os nomes dos arquivos internos de algumas pastas não foram todos exibidos na listagem pública; por isso, nesses casos, a documentação descreve a finalidade da pasta sem inventar nomes.
+O repositório está organizado em arquivos HTML, pastas de recursos visuais e audiovisuais, folhas de estilo, scripts JavaScript, documentação e evidências de validação. Essa organização facilita a manutenção do código e a identificação dos materiais utilizados no desenvolvimento do Trocaverde.
 
 ```text
 ReVeste/
-├── README.md
-├── index.html
-├── sobre.html
-├── projetos.html
-├── impacto.html
 ├── acessibilidade.html
+├── contato.html
 ├── galeria.html
+├── impacto.html
+├── index.html
 ├── midia.html
 ├── noticias.html
-├── contato.html
 ├── orcamento_hospedagem.html
+├── projetos.html
+├── sobre.html
 ├── favicon.svg
+│
 ├── assets/
-│   ├── video/
-│   │   └── mutirao-troca.mp4
-│   └── audio/
-│       └── depoimento-participante.mp3
+│   ├── audio/
+│   │   └── relato-audio.mpeg
+│   └── video/
+│       ├── relato-video.mp4
+│       └── relato-video.vtt
+│
 ├── css/
 │   └── style.css
+│
 ├── docs/
+│   ├── README.md
 │   ├── diario-de-bordo.md
 │   ├── escopo-projeto-trocaverde.md
-│   ├── orcamento-hospedagem.md
 │   ├── evidencias-de-testes.md
 │   ├── melhorias-mvp.md
+│   ├── orcamento-hospedagem.md
 │   └── uso-de-ia.md
+│
 ├── img/
-│   └── poster-mutirao.png
-└── js/
-    └── arquivos JavaScript do projeto
+│   ├── Antes-TrocaVerde.jpeg
+│   ├── BlusaSocialM.jpg
+│   ├── CalcaJeansReta40.jpg
+│   ├── CalcaMoletomG.jpg
+│   ├── CamisaBandaG.jpeg
+│   ├── CamisaLinhoP.jpeg
+│   ├── CamisaListradaM.jpeg
+│   ├── CasacoLaG.jpg
+│   ├── JaquetaJeansM.jpg
+│   ├── QRcode.png
+│   ├── Site_Depois_TrocaVerde.jpeg
+│   ├── TenisBranco38.jpg
+│   ├── VestidoFloralM.jpg
+│   ├── VestidoLongoM.jpg
+│   ├── noticia-animale.jpg
+│   └── poster_relato_video.jpg
+│
+├── js/
+│   └── main.js
+│
+└── teste w3c/
+    ├── w3c-acessibilidade.png
+    ├── w3c-contato.png
+    ├── w3c-css.png
+    ├── w3c-galeria.png
+    ├── w3c-impacto.png
+    ├── w3c-index.png
+    ├── w3c-midia.png
+    ├── w3c-noticias.png
+    ├── w3c-orcamento.png
+    ├── w3c-projetos.png
+    └── w3c-sobre.png
 ```
 
-### Arquivos HTML
+### Organização dos diretórios e arquivos
 
-| Arquivo | Conteúdo |
+| Diretório/arquivo | Finalidade |
 |---|---|
-| `index.html` | Apresentação do Trocaverde e acesso às principais seções |
-| `sobre.html` | História, missão, visão e valores |
-| `projetos.html` | Iniciativas e ações de troca |
-| `impacto.html` | Indicadores ilustrativos e informações sobre impacto ambiental |
-| `acessibilidade.html` | Recursos de acessibilidade e inclusão |
-| `galeria.html` | Galeria ilustrativa de peças para troca |
-| `midia.html` | Conteúdo audiovisual e mapa incorporado |
-| `noticias.html` | Conteúdos informativos sobre moda e sustentabilidade |
-| `contato.html` | Formulário e canais de contato |
-| `orcamento_hospedagem.html` | Comparação de hospedagem e domínio |
-
-### Pastas e demais arquivos
-
-| Pasta/arquivo | Finalidade |
-|---|---|
-| `assets/` | Recursos de mídia utilizados no site; o README do repositório cita os arquivos de vídeo e áudio de demonstração |
-| `css/` | Folhas de estilo; o arquivo `style.css` concentra a identidade visual e a responsividade |
-| `docs/` | Documentação do projeto: diário, escopo, orçamento, evidências de testes, melhorias do MVP e uso de IA |
-| `img/` | Imagens e materiais visuais; o README cita o pôster do vídeo e a galeria ilustrativa |
-| `js/` | Scripts JavaScript responsáveis pelas interações e funcionalidades da versão A2 |
-| `favicon.svg` | Ícone do site exibido na aba do navegador |
-| `README.md` | Apresentação do projeto, equipe, tecnologias, estrutura e instruções para execução |
+| Arquivos `.html` | Estruturação das dez páginas interligadas do site. |
+| `assets/` | Armazenamento dos recursos audiovisuais utilizados na página de mídia. |
+| `assets/audio/` | Arquivo de áudio com relato relacionado ao projeto. |
+| `assets/video/` | Vídeo do projeto e arquivo de legendas no formato WebVTT (`.vtt`). |
+| `css/` | Armazenamento da folha de estilos principal, responsável pela identidade visual e responsividade. |
+| `docs/` | Documentação do projeto, incluindo README, diário de bordo, escopo, orçamento, testes, melhorias do MVP e uso de IA. |
+| `img/` | Imagens utilizadas nas páginas, incluindo peças da galeria, materiais ilustrativos e registros de antes e depois do MVP. |
+| `js/` | Scripts JavaScript responsáveis pelas validações, interações e funcionalidades dinâmicas do site. |
+| `teste w3c/` | Capturas de tela das validações das páginas realizadas no W3C Validator. |
+| `favicon.svg` | Ícone de identificação do site exibido na aba do navegador.</text>
 
 ## Distribuição de responsabilidades
 
