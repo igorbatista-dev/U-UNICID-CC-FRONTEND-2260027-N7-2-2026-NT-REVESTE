@@ -906,3 +906,8 @@ textarea:focus-visible { outline-color: var(--color-accent); }
   .stat-overlap .stat-number { color: var(--color-secondary); }
   .form-success { background: #1e3a28; color: #c9e8d2; }
 }
+
+/* Força o atributo hidden a funcionar mesmo com display flex */
+[hidden] {
+  display: none !important;
+}
