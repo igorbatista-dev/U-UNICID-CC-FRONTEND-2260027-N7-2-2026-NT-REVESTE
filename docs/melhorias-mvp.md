@@ -26,7 +26,7 @@ Assim, não se atribui à equipe uma correção específica sem uma comparação
 | JavaScript | Opcional no escopo da primeira versão | O código fornecido implementa dropdown, reveal, contadores, filtros, lightbox, campo condicional, contador de caracteres, `localStorage` e envio do formulário |
 | Publicação | Site local na primeira entrega | Exige publicação HTTPS; não foi fornecido endereço público nesta revisão |
 
-[Print de antes](img/antes-TrocaVerde.jpeg) ; [Print de depois](img/Site_Depois_TrocaVerde.jpeg) 
+EVOLUÇÃO MVP - [Print de antes](img/antes-TrocaVerde.jpeg) ; [Print de depois](img/Site_Depois_TrocaVerde.jpeg) 
 
 ## 3. Melhorias exigidas
 
