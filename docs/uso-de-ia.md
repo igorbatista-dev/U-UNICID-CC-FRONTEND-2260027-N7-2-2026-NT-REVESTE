@@ -58,7 +58,7 @@ O ChatGPT foi utilizado para auxiliar a equipe nas seguintes atividades:
 
 A Inteligência Artificial foi utilizada como ferramenta de apoio ao desenvolvimento e à organização do projeto Trocaverde.
 
-**Apoio ao desenvolvimento e revisão do site Trocaverde**
+## **Apoio ao desenvolvimento e revisão do site Trocaverde**
 
 Este documento apresenta os prompts utilizados no ChatGPT e as respectivas respostas, com o objetivo de auxiliar a equipe no desenvolvimento, organização e revisão do projeto Trocaverde.
 
