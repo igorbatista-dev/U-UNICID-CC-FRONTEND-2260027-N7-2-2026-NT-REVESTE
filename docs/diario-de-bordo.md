@@ -49,6 +49,15 @@ Este diário reúne as principais decisões, atividades, verificações, dificul
 - Os documentos complementares foram considerados em conjunto, buscando manter coerência entre README, escopo, orçamento, testes, melhorias do MVP e uso de IA.
 - Foi reforçada a necessidade de uma conferência final da equipe antes de incorporar as alterações ao repositório.
 
+### 15/11/2026 — Revisão final da documentação
+
+Foi realizada uma revisão da documentação do projeto Trocaverde, com o objetivo de alinhar os registros à versão final do site.
+
+Durante essa etapa, foram revisados o orçamento de hospedagem, as informações sobre a integração com o Formspree e a distinção entre o formulário de contato e a newsletter demonstrativa.
+
+Também foi organizada a documentação de testes e das melhorias realizadas desde a primeira entrega do MVP.
+
+
 ## Aprendizados registrados
 
 - O atributo `aria-current="page"` ajuda a identificar a página atual na navegação.

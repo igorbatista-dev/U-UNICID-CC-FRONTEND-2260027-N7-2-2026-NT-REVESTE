@@ -262,6 +262,17 @@ O README apresenta a seguinte URL de publicação:
 
 A existência desse endereço está documentada no repositório. A disponibilidade atual do site, o acesso HTTPS e o funcionamento das dez páginas online precisam ser conferidos diretamente no navegador.
 
+### 6.3 Revisão final dos testes
+
+| Elemento testado | Procedimento |
+|---|---|---|
+| Navegação | Acessar as páginas pelo menu |
+| Responsividade | Verificar o site em diferentes larguras |
+| Formulário | Enviar dados inválidos e válidos |
+| localStorage | Salvar dados e recarregar a página |
+| Acessibilidade | Navegar utilizando o teclado |
+| Links | Verificar os links internos e externos |
+
 ## 7. Conclusão
 
 As verificações registradas durante o desenvolvimento do Trocaverde permitiram analisar a estrutura das páginas, a navegação, os elementos HTML, a responsividade e a implementação das funcionalidades JavaScript.
